@@ -1,0 +1,2458 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<LINK REL="stylesheet" HREF="styles.css">
+	<script language="javascript1.2" src="menu.js"></script>
+
+</head>
+
+<body background="img/fon1.gif" leftmargin=0 topmargin=0 onload="newTitle('5')">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><div align="justify">
+				
+	 <h2><a name="level1"></a>Клавиатурные
+      команды</a></h2> 
+  <p>Команды клавиатуры, относящиеся к редактору, находятся в файле .\cfg\input.cfg
+    в секции MAPEDITOR BINDS. При необходимости их можно менять, предварительно
+    сохранив оригинальный вариант файла input.cfg.</p> 
+  <h3>Режим
+      редактирования объектов на карте</h3> 
+  <table width="600" border="1" cellspacing="0" cellpadding="5" bordercolor="#595F60">
+    <tr> 
+      <td width=132 valign=top> <p>Delete</p></td> 
+      <td width=525 valign=top> <p>Удалить текущий объект или
+          выделенную группу объектов</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Ctrl+B</p></td> 
+      <td width=525 valign=top> <p>Просмотр решётки устойчивости
+          строений</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>F</p></td> 
+      <td width=525 valign=top> <p>Центрирование камеры на выделенный
+          объект</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Esc</p></td> 
+      <td width=525 valign=top> <p>Отмена выделения объекта, отмена
+          любых незаконченных действий, закрытие контекстного меню</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Ctrl+C</p></td> 
+      <td width=525 valign=top> <p>Копировать</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Ctrl+V</p></td> 
+      <td width=525 valign=top> <p>Вставить</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Ctrl+A</p></td> 
+      <td width=525 valign=top> <p>Выделить все объекты в основном
+          окне</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Alt</p></td> 
+      <td width=525 valign=top> <p>Переключить фокус ввода в основное
+          окно</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>А</p></td> 
+      <td width=525 valign=top> <p>Показать AI-геометрию</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>SPACE</p></td> 
+      <td width=525 valign=top> <p>Поднять пятно (spot) над другими</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Num +</p></td> 
+      <td width=525 valign=top> <p>Перейти на этаж выше</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Num –</p></td> 
+      <td width=525 valign=top> <p>Перейти на этаж ниже</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>R</p></td> 
+      <td width=525 valign=top> <p>Повернуть объект на 90 градусов</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Ctrl+D</p></td> 
+      <td width=525 valign=top> <p>Показать / скрыть информативные
+          линии</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Z</p></td> 
+      <td width=525 valign=top> <p>Временно перейти в режим перемещения
+          объекта по вертикали</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Scroll</p></td> 
+      <td width=525 valign=top> <p>Вывести текущее значение FPS</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Ctrl+S</p></td> 
+      <td width=525 valign=top> <p>Перейти в режим редактирования
+          скрипта</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Ctrl+Z</p></td> 
+      <td width=525 valign=top> <p>Отмена (undo), действует только
+          в основном окне и не на всех операциях</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p><span lang=EN-US>Ctrl+Shift+Z</span></p></td> 
+      <td width=525 valign=top> <p>Возврат (redo)</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Ctrl+F</p></td> 
+      <td width=525 valign=top> <p>Поиск в окне списка объектов</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p><span lang=EN-US>F6, Shift+F6</span></p></td> 
+      <td width=525 valign=top> <p>Следующая / предыдущая панель
+          редактора</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>W</p></td> 
+      <td width=525 valign=top> <p>Режим отображения в виде «проволочной
+          рамки»</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Alt+Enter</p></td> 
+      <td width=525 valign=top> <p>Полноэкранный режим</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>P</p></td> 
+      <td width=525 valign=top> <p>Вывести окно настроек редактора</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>N</p></td> 
+      <td width=525 valign=top> <p>Вывести следующий вариант темплейта</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>B</p></td> 
+      <td width=525 valign=top> <p>Вывести предыдущий вариант
+          темплейта</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Alt+Right</p></td> 
+      <td width=525 valign=top> <p>Сдвинуть выделение вправо</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Alt+Left</p></td> 
+      <td width=525 valign=top> <p>Сдвинуть выделение влево</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p><span lang=EN-US>Alt</span>+<span
+  lang=EN-US>Up</span></p></td> 
+      <td width=525 valign=top> <p>Сдвинуть выделение вперёд</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Alt+Down</p></td> 
+      <td width=525 valign=top> <p>Сдвинуть выделение назад</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p><span lang=EN-US>Alt</span>+<span
+  lang=EN-US>PgUp</span></p></td> 
+      <td width=525 valign=top> <p>Сдвинуть выделение вверх</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Alt+PgDn</p></td> 
+      <td width=525 valign=top> <p>Сдвинуть выделение вниз</p></td> 
+    </tr> 
+  </table> 
+  <h3>Режим
+      просмотра объектов на закладке </h3> 
+    <table width="600" border="1" cellspacing="0" cellpadding="5" bordercolor="#595F60">
+    <tr> 
+      <td width=132 valign=top> <p>SPACE</p></td> 
+      <td width=525 valign=top> <p>Посмотреть фазы разрушения
+          объекта</p></td> 
+    </tr> 
+    <tr> 
+      <td width=132 valign=top> <p>Ctrl+I</p></td> 
+      <td width=525 valign=top> <p>Записать положение камеры в
+          свойства этого объекта</p></td> 
+    </tr> 
+  </table> 
+  <h3>Просмотр       и отладка карты в «игровом» режиме</h3> 
+  <p>В игре Операция Silent Storm: Часовые предусмотрен набор отладочных команд, часть из них полезна
+    при разработке и отладке миссий. Эти команды не включены в оригинальный файл
+    конфигурации input.cfg, но их можно добавить вручную, сделав секцию DEBUG
+    FEATURES после секции Camera, тогда их можно будет использовать при запуске
+    игры непосредственно в редакторе. Например, взрывы в текущей точке и вывод
+    блочной структуры строений дают возможность оценить устойчивость различных
+    частей строения к взрывной волне. Телепорт полезен для проверки проходимости
+    различных участков карты — мест со сложным рельефом, обстановки в комнатах
+    и т.д.</p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>//============================================================================
+      // DEBUG FEATURES</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      explode            'LCTRL' + 'J'     // </span><span style='font-size:10.0pt;font-family:"Courier New"'>Взрыв</span><span style='font-size:10.0pt;
+font-family:"Courier New";'> </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>в</span><span
+style='font-size:10.0pt;font-family:"Courier New";
+'> </span><span style='font-size:10.0pt;font-family:"Courier New"'>текущей</span><span style='font-size:10.0pt;
+font-family:"Courier New";'> </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>точке</span><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+'> (1)</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      explode            'RCTRL' + 'J'</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      explosion          'LCTRL' + 'E'     // </span><span style='font-size:10.0pt;font-family:"Courier New"'>Взрыв</span><span style='font-size:10.0pt;
+font-family:"Courier New";'> </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>в</span><span
+style='font-size:10.0pt;font-family:"Courier New";
+'> </span><span style='font-size:10.0pt;font-family:"Courier New"'>текущей</span><span style='font-size:10.0pt;
+font-family:"Courier New";'> </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>точке</span><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+'> (2)</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      explosion          'RCTRL' + 'E'</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      cheat_teleport     'LCTRL' + 'T'     // </span><span style='font-size:10.0pt;font-family:"Courier New"'>Телепорт</span><span style='font-size:10.0pt;
+font-family:"Courier New";'> </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>персонажа</span><span
+style='font-size:10.0pt;font-family:"Courier New";
+'> </span><span style='font-size:10.0pt;font-family:"Courier New"'>в</span><span style='font-size:10.0pt;
+font-family:"Courier New";'> </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>текущую</span><span
+style='font-size:10.0pt;font-family:"Courier New";
+'> </span><span style='font-size:10.0pt;font-family:"Courier New"'>точку</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      cheat_teleport     'RCTRL' + 'T'</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      wireframe          'LCTRL' + 'W'     // «</span><span style='font-size:10.0pt;font-family:"Courier New"'>Скелетный</span><span lang=EN-US
+style='font-size:10.0pt;font-family:"Courier New";
+'>» </span><span style='font-size:10.0pt;font-family:"Courier New"'>режим</span><span lang=EN-US
+style='font-size:10.0pt;font-family:"Courier New";
+'> (wireframe)</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      wireframe          'RCTRL' + 'W'</span></p> 
+  <p><span style='font-size:10.0pt;font-family:"Courier New"'>bind switch_timeofday   'F3'              //
+      Переключение времени суток</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>; ====
+      AI MAP CONTROLS ====</span></p> 
+  <p><span style='font-size:10.0pt;font-family:"Courier New"'>bind aiShowGrid         'G'               //
+      Просмотр блочной структуры строения</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      aiShowKnots  'N'                     // </span><span style='font-size:10.0pt;font-family:
+"Courier New"'>Вывод</span><span style='font-size:10.0pt;font-family:"Courier New";'> </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>узлов</span></p> 
+  <p><span style='font-size:10.0pt;font-family:"Courier New"'>bind aiClearTrace 'C'                     //
+      Стирание линий проходимости</span></p> 
+  <p><span style='font-size:10.0pt;font-family:"Courier New"'>bind aiGridTrace  'T'                     //
+      Вывод линий проходимости</span></p> 
+  <p><span style='font-size:10.0pt;font-family:"Courier New"'>bind aiShowWaypoints
+      'LSHIFT' + 'W'      // Показать пути движения (waypoints)</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      aiShowWaypoints 'RSHIFT' + 'W'</span></p> 
+  <p>Для визуализации AI необходимо добавить в секцию GAME BINDS выделенные строки:</p> 
+  <p><span style='font-size:10.0pt;font-family:"Courier New"'>...</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind</span><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> </span><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>gamemenu</span><span
+style='font-size:10.0pt;font-family:"Courier New"'>   '</span><span lang=EN-US style='font-size:
+10.0pt;font-family:"Courier New";'>F</span><span style='font-size:10.0pt;font-family:"Courier New"'>10'</span></p> 
+  <p><b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind</span></b><b><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> </span></b><b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>showai</span></b><b><span
+style='font-size:10.0pt;font-family:"Courier New"'>       '</span></b><b><span lang=EN-US
+style='font-size:10.0pt;font-family:"Courier New";
+'>LCTRL</span></b><b><span style='font-size:10.0pt;
+font-family:"Courier New"'>' + '</span></b><b><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+'>A</span></b><b><span style='font-size:10.0pt;
+font-family:"Courier New"'>'           // Включить вывод AI-геометрии</span></b></p> 
+  <p><b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+        showai       'RCTRL' + 'A'</span></b></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>bind
+      skipScript         'ESC'</span></p> 
+  <p><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";'>...</span></p> 
+	 <h2><a name="level2"></a>Установка SQL-сервера MSDE</h2> 
+  <h3>Установка </h3> 
+  <p><b>Загрузка последней версии MSDE</b></p> 
+  <p>Ссылку на наиболее полную версию сервера MSDE 2000 с последними обновлениями
+    и исправлениями безопасности можно найти на web-странице Microsoft по адресу:</p> 
+  <p>http://www.microsoft.com/sql/msde/downloads/default.asp</p> 
+  <p>Выберите ссылку «Download» в верхней части страницы, на следующей странице
+    укажите язык сервера (обычно английский), далее в списке файлов для загрузки
+    выберите SQL-сервер (например, sql2kdesksp3.exe, размер около 70 Мб, остальные
+    компоненты не требуются). После загрузки запустите exe-файл и укажите временный
+    каталог для распаковки комплекта инсталляции (после успешной установки каталог
+    можно будет удалить). Для корректной установки сервера следует заменить в
+    полученном комплекте конфигурационный файл setup.ini файлом, находящимся
+    на компакт-диске: &lt;CD1&gt;\Bin\MSDE\setup.ini. </p> 
+  <p><b>Решение проблем с установкой</b></p> 
+  <p>Если в операционных системах класса Windows 2000 и Windows XP установить
+    SQL-сервер не удаётся, откройте окно 'Run' и выведите log-файл процесса инсталляции
+    командой:</p> 
+  <p><span lang=EN-US>setup.exe /L*v c:\setup.log</span></p> 
+  <p>(имя log-файла и путь к нему можно при желании изменить). Отыщите в log-файле
+    строку со словом 'failed'. При ошибке типа <span
+lang=EN-US>InstallSQLAgentSecurity</span><span
+lang=EN-US> </span><span lang=EN-US>failed</span> (MACHINE,<span lang=EN-US>LocalSystem</span>,87),
+    где вместо MACHINE написано имя вашего компьютера, проверьте, установлен
+    ли у вас сервис File and Printer Sharing for Microsoft Networks. Если нет,
+    добавьте этот сервис в панели свойств локальной сети. Проверьте также, запущены
+    ли системные сервисы Server и Computer Browser. Если ваш компьютер подключен
+    к сети Интернет напрямую, в целях безопасности рекомендуется оставить сервис
+    File and Printer Sharing неиспользованным, убрав галочку в этой строке на
+    панели свойств сети. Если ваш компьютер вообще не подключен к сети, установите
+    сетевой адаптер Microsoft Loopback Adapter и протокол TCP/IP, это даст возможность
+    установить требуемые сетевые компоненты.</p> 
+  <h3>Инструменты
+      для вывода сценарного графа</h3> 
+  <p>Загрузите из Сети компоненты для построения сценарного графа, не входящие
+    в поставку редактора — файлы dot.exe, ft.dll, jpeg.dll, png.dll и z.dll,
+    и запишите их в каталог &lt;S3&gt;\scengraph. Их можно найти на странице
+    разработчика программы Graphwiz по адресу:</p> 
+  <p>http://www.research.att.com/sw/tools/graphviz/download.html</p> 
+  <p>Найдите на этой странице раздел<span
+lang=EN-US> Binary Executable Packages for Windows. </span>Вместо загрузки отдельных
+    файлов можно загрузить полный установочный комплект программы Graphwiz —
+    Windows Install package (1.10.0). После её установки найдите необходимые
+    файлы и скопируйте их вручную в каталог &lt;S3&gt;\scengraph. Если вы не
+    предполагаете в дальнейшем работать с программой Graphwiz, её можно удалить.</p> 
+	 <h2><a name="level3"></a>Прямой
+      доступ к БД игры черед </h2> 
+  <p>Если ваши замыслы ограничиваются разработкой собственных миссий, то прямой
+    доступ к базе данных (БД) игры вам не нужен. Если же в ваши задачи входит
+    изменение исходного сценария игры или создания собственного сценария, придётся
+    редактировать БД игры напрямую, поскольку многие поля базы данных, ответственные
+    за сценарий, из редактора недоступны. Для этого необходимо получить доступ
+    к БД через SQL-сервер, используя соответствующий драйвер. Рекомендуем использовать
+    программу Microsoft Access 2000 или XP.</p> 
+  <p><img src="img/machine_dsn.gif" width="449" height="388" hspace="5" vspace="5" border="0" align="right" alt="">Прежде
+    всего необходимо запустить SQL-сервер. Затем откройте Панель управления (Windows
+    Control Panel) и найдите инструмент для управления ODBC (ODBC Data Source).
+    На закладке User DSN должен присутствовать источник данных MQIS, а на закладке
+    Drivers — драйвер SQL Server. Запустите MS Access и создайте новую пустую
+    базу данных (Blank Access database) с любым именем — например, с именем вашего
+    профиля.<span style='color:#993300'> </span>Обратите внимание, что SQL-сервер
+    поддерживает как основную БД игры, так и базы всех созданных вами профилей
+    — следовательно, вы должны решить, к какой базе данных подключиться. Для
+    подключения к БД разных профилей необходимо создать разные базы в Access.</p> 
+  <p>Следующим шагом должно быть установление связи Access с выбранной базой.
+    Для этого в меню <span lang=EN-US>File, Get external data </span>выберите пункт <span lang=EN-US>Link
+    tables. </span>В открывшемся диалоговом окне файловой системы необходимо
+    из списка типов файлов (нижний выпадающий список) выбрать тип ODBC databases.
+    Откроется окно выбора источника данных (см. снимок). В нём необходимо перейти
+    на закладку Machine data source и выбрать источник данных MQIS — SQL Server.
+    Нажмите «OK».</p> 
+  <p><img src="img/sql_login.gif" width="359" height="326" hspace="5" vspace="5" border="0" align="left" alt="">Откроется
+    окно подключения к SQL-серверу, в котором необходимо выбрать базу — источник
+    данных. Если вы работаете в ОС Windows 2000 или XP, рекомендуется отметить
+    поле Use Trusted Connection, при этом для доступа к локальному SQL-серверу
+    вводить имя и пароль обычно не требуется. Нажатие кнопки Options &gt;&gt; открывает
+    список дополнительных параметров, главный из которых — имя базы. Из списка
+    доступных баз данных следует выбрать базу, с которой вы будете работать.
+    Исходная база игры имеет имя A5GAME, а базы-копии, созданные в пользовательских
+    профилях — A5GAME_имя_профиля. Выберите базу, соответствующую вашему рабочему
+    профилю. Поля Language и Application Name можно оставить без изменения. В
+    поле Workstation ID следует ввести «localhost» или оставить имя вашей машины,
+    если оно было подставлено по умолчанию. После того как связь с требуемой
+    базой данных установлена, можно приступать к импорту списка таблиц и их полей.
+    Если установить связь с SQL-сервером не удаётся (выводится сообщение об ошибке
+    имени или пароля), возможно, ваш пользовательский профиль в Windows имеет
+    недостаточные полномочия. Как вариант, используйте административный вход
+    или исключите авторизацию на сетевом сервере, если ваша машина работает в
+    локальной сети.</p> 
+  <p><img src="img/link_tables.gif" width="466" height="241" hspace="5" vspace="5" border="0" align="right" alt="">Вид
+    окна для связи с внешними таблицами может зависеть от версии Access. В окне
+    выводится список таблиц, которые присутствуют в БД игры. Следует выбрать
+    все таблицы кнопкой Select All и нажать OK, тогда Access начнёт чтение таблицы
+    и создание ссылок. В некоторые моменты от вас может потребоваться ответ на
+    запросы о ключевом поле в очередной связываемой таблице. Вначале попробуйте
+    найти поле с именем ID; если в списке полей такого нет — первое поле, где
+    «ID» является составной частью имени; а если и таких полей не оказалось,
+    выбирайте самое первое поле в списке. После завершения импорта в окне таблиц
+    появляется список таблиц игровой БД. Каждую таблицу можно открыть, посмотреть
+    и при необходимости внести те или иные изменения. Обратите внимание, что
+    созданная в Access'е база данных *.mdb, связанная с БД игры, запоминает внешние
+    ссылки, поэтому выполнять импорт ссылок больше не нужно, может понадобиться
+    лишь обновление ссылок. Например, можно использовать созданную таким образом
+    базу Access для подключения к БД другой модификации игры, для этого воспользуйтесь
+    мастером связанных таблиц.</p> 
+	 <h2><a name="level4"></a>Архивация
+      и восстановление профиля</a></h2> 
+  <p>При длительной работе над проектом рекомендуется время от времени делать
+    резервные копии каталога профиля со всем содержимым. Это поможет справиться
+    с ситуациями, когда неудачные изменения, внесённые в базу данных игры, приводят
+    к сбоям — или при входе в миссию, или при загрузке карты в редакторе (копирование
+    исходной БД, находящейся в каталоге .\res, на место рабочей исправит ситуацию,
+    но приведёт к потере всего созданного материала). Для создания архивной копии
+    желательно использовать какой-либо архиватор — например, ZIP, RAR и т.п.
+    При архивации профиля обращайте внимание на сохранение структуры подкаталогов.</p> 
+  <p>Для восстановления сделанной ранее архивной копии достаточно при выключенном
+    SQL-сервере распаковать файлы архива в каталог с именем профиля, заменив
+    ими старые файлы. Если требуется перенести профиль с одной машины на другую
+    или восстановить профиль после переустановки игры, простое копирование не
+    решит задачи, поскольку база данных не будет подключена к SQL-серверу. Необходимо
+    выполнить следующие операции: запустить SQL-сервер, в начальном диалоге редактора
+    создать новый профиль с именем, который был у старого профиля, остановить
+    SQL-сервер, заменить содержимое каталога с именем профиля файлами архивной
+    копии, обязательно восстановив при этом структуру подкаталогов. Затем нужно
+    запустить SQL-сервер и редактор, и убедиться, что перенесённая база данных
+    подключена и с ней можно работать.</p> 
+ 	 <h2><a name="level5"></a>Элементы HTML,
+      поддерживаемые игрой</h2> 
+  <p>В текстовых ресурсах игры можно использовать некоторые элементы языка <span lang=EN-US>HTML</span>,
+    которые управляют стилем надписей — выравниванием текста, разбиением его
+    по абзацам, цветовым оформлением. Все описатели должны располагаться в угловых
+    скобках. В отличие от стандартного языка <span lang=EN-US>HTML</span>, закрывающие
+    элементы и их вложение описателей не предусмотрены, каждый новый описатель
+    отменяет предыдущий описатель того же типа.</p> 
+  <p><b>Управление выводом строк</b></p> 
+   <table width="600" border="1" cellspacing="0" cellpadding="5" bordercolor="#595F60"> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;br&gt;</p></td> 
+      <td width=505 valign=top> <p>Принудительный разрыв строки</p></td> 
+    </tr> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;left&gt;</p></td> 
+      <td width=505 valign=top> <p>Прижим блока к левому краю</p></td> 
+    </tr> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;right&gt;</p></td> 
+      <td width=505 valign=top> <p>Прижим блока к правому краю</p></td> 
+    </tr> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;center&gt;</p></td> 
+      <td width=505 valign=top> <p>Выравнивание блока по центру</p></td> 
+    </tr> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;<span lang=EN-US>nowrap</span>&gt;</p></td> 
+      <td width=505 valign=top> <p>Запретить автоматический перенос
+          строки</p></td> 
+    </tr> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;justify&gt;</p></td> 
+      <td width=505 valign=top> <p>Выравнивание по обоим краям,
+          с растяжением пробелов (работает не всегда)</p></td> 
+    </tr> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;wrapleft&gt;</p></td> 
+      <td width=505 valign=top> <p>Выравнивание по левому краю
+          с «откусыванием»<span
+  style='font-family:"Courier New"'> </span>пространства</p></td> 
+    </tr> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;wrapright&gt;</p></td> 
+      <td width=505 valign=top> <p>Выравнивание по правому краю
+          с «откусыванием»<span
+  style='font-family:"Courier New"'> </span>пространства</p></td> 
+    </tr> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;top&gt;</p></td> 
+      <td width=505 valign=top> <p>Выравнивание по верхней границе
+          (нужно, если есть шрифты разного размера )</p></td> 
+    </tr> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;bottom&gt;</p></td> 
+      <td width=505 valign=top> <p>Выравнивание по нижней границе</p></td> 
+    </tr> 
+    <tr> 
+      <td width=95 valign=top> <p>&lt;middle&gt;</p></td> 
+      <td width=505 valign=top> <p>Выравнивание по центру</p></td> 
+    </tr> 
+  </table> 
+  <p><b>Управление видом текста</b></p> 
+   <table width="600" border="1" cellspacing="0" cellpadding="5" bordercolor="#595F60"> 
+    <tr> 
+      <td width=182 valign=top> <p>&lt;font ... &gt;</p></td> 
+      <td width=475 valign=top> <p>Задать шрифт и его параметры
+          (...)</p></td> 
+    </tr> 
+    <tr> 
+      <td width=182 valign=top> <p>            <span
+  lang=EN-US>size</span>=xx<span lang=EN-US>pt</span></p></td> 
+      <td width=475 valign=top> <p>размер шрифта в точках (<span lang=EN-US>points</span>, <span lang=EN-US>pt</span>)</p></td> 
+    </tr> 
+    <tr> 
+      <td width=182 valign=top> <p>            <span
+  lang=EN-US>face</span>=<span lang=EN-US>name</span></p></td> 
+      <td width=475 valign=top> <p>название шрифта (из шрифтов,
+          присутствующих игре)</p></td> 
+    </tr> 
+    <tr> 
+      <td width=182 valign=top> <p>            outlinesize=ww</p></td> 
+      <td width=475 valign=top> <p>размер контура вокруг символов</p></td> 
+    </tr> 
+    <tr> 
+      <td width=182 valign=top> <p>            <span
+  lang=EN-US>outlinecolor=name</span></p></td> 
+      <td width=475 valign=top> <p>цвет контура</p></td> 
+    </tr> 
+    <tr> 
+      <td width=182 valign=top> <p><span lang=EN-US>            f</span>orcefontsize=xxpt</p></td> 
+      <td width=475 valign=top> <p>игнорировать прибавку, создаваемую
+          параметром <span
+  lang=EN-US>outline</span></p></td> 
+    </tr> 
+    <tr> 
+      <td width=182 valign=top> <p>            <span
+  lang=EN-US>color</span>=<span lang=EN-US>name</span></p></td> 
+      <td width=475 valign=top> <p>Цвет берётся из списка: <span lang=EN-US>white</span>, <span lang=EN-US>red</span>, <span lang=EN-US>green</span>, <span
+  lang=EN-US>blue</span>, <span lang=EN-US>yellow</span>, <span lang=EN-US>cyan</span>, <span lang=EN-US>orange</span>, <span lang=EN-US>pink</span>, <span lang=EN-US>brown</span>, <span lang=EN-US>grey</span>, <span lang=EN-US>black</span>, <span lang=EN-US>darkyellow</span>, <span lang=EN-US>beige</span>,
+          lightblue, либо AARRGGBB —<span
+  style='font-family:"Courier New"'> </span>в 16-ричном формате (<span
+  lang=EN-US>AA</span> — альфа-канал).</p></td> 
+    </tr> 
+  </table> 
+  <p>Шрифты<span lang=EN-US>: Courier — 16, 18, 20; Courier Bold — 17, 24, 36;
+      Impact — 20, 24, 36, 55; Arial — 11.</span></p> 
+  <p><b>Вставка изображения в текст</b></p> 
+    <table width="600" border="1" cellspacing="0" cellpadding="5" bordercolor="#595F60">
+    <tr> 
+      <td width=169 valign=top> <p>&lt;<span lang=EN-US>image</span> ... &gt;</p></td> 
+      <td width=488 valign=top> <p>Место вставки картинки</p></td> 
+    </tr> 
+    <tr> 
+      <td width=169 valign=top> <p>            <span
+  lang=EN-US>align</span>=<span lang=EN-US>left</span></p></td> 
+      <td width=488 valign=top> <p>прижим влево, текст «обтекает»
+          справа</p></td> 
+    </tr> 
+    <tr> 
+      <td width=169 valign=top> <p>            <span
+  lang=EN-US>align</span>=<span lang=EN-US>right</span></p></td> 
+      <td width=488 valign=top> <p>прижим вправо, текст «обтекает»
+          слева</p></td> 
+    </tr> 
+    <tr> 
+      <td width=169 valign=top> <p>            <span
+  lang=EN-US>id</span>=####</p></td> 
+      <td width=488 valign=top> <p>номер картинки в БД из ресурсной
+          закладки <span
+  lang=EN-US>UITexture</span></p></td> 
+    </tr> 
+    <tr> 
+      <td width=169 valign=top> <p>            <span
+  lang=EN-US>width</span>=<span lang=EN-US>xx</span></p></td> 
+      <td width=488 valign=top> <p>ширина картинки (если не указана,
+          то ширина самого изображения)</p></td> 
+    </tr> 
+    <tr> 
+      <td width=169 valign=top> <p>            <span
+  lang=EN-US>height</span>=<span lang=EN-US>yy</span></p></td> 
+      <td width=488 valign=top> <p>высота картинки (если не указана,
+          то высота самого изображения)</p></td> 
+    </tr> 
+    <tr> 
+      <td width=169 valign=top> <p>            <span
+  lang=EN-US>border</span>=<span lang=EN-US>ww</span></p></td> 
+      <td width=488 valign=top> <p>ширина отступов вокруг картинки</p></td> 
+    </tr> 
+  </table> 
+  <p><b>Пример строки с разметкой</b></p> 
+  <p><span lang=EN-US>&lt;font face=Courier size=16pt&gt;&lt;color=darkyellow&gt;</span>Закрыть<span
+lang=EN-US>.&lt;br&gt;&lt;color=beidge&gt;</span>Закрывает панель улик<span lang=EN-US>.</span></p> 
+</div> 
+<br clear=all style='page-break-before:right;
+'> 
+<div class=Section2> 
+	 <h2><a name="level6"></a>Скриптовые
+      функции</h2> 
+  <p>В скриптовых функциях для параметров и возвращаемых значений используются
+    следующие типы переменных:</p> 
+    <table width="600" border="1" cellspacing="0" cellpadding="5" bordercolor="#595F60">
+    <tr> 
+      <td width=101 valign=bottom nowrap> <p><span lang=EN-US>number</span></p></td> 
+      <td width=37 valign=bottom nowrap> <p><b><span lang=EN-US style='font-family:Courier;'>n</span></b></p></td> 
+      <td width=411 valign=top> <p>число рационального типа <span lang=EN-US>real
+            (double-precision float)</span></p></td> 
+    </tr> 
+    <tr> 
+      <td width=101 valign=bottom nowrap> <p>string</p></td> 
+      <td width=37 valign=bottom nowrap> <p><b><span style='font-family:Courier'>s</span></b></p></td> 
+      <td width=411 valign=top> <p>текстовая строка, заканчивающаяся
+          '\0'</p></td> 
+    </tr> 
+    <tr> 
+      <td width=101 valign=bottom nowrap> <p>unit</p></td> 
+      <td width=37 valign=bottom nowrap> <p><b><span style='font-family:Courier'>u</span></b></p></td> 
+      <td width=411 valign=top> <p>ID персонажа</p></td> 
+    </tr> 
+    <tr> 
+      <td width=101 valign=bottom nowrap> <p><span lang=EN-US>bool</span></p></td> 
+      <td width=37 valign=bottom nowrap> <p><b><span style='font-family:Courier'>b</span></b></p></td> 
+      <td width=411 valign=top> <p>логическое значение (true или
+          false)</p></td> 
+    </tr> 
+    <tr> 
+      <td width=101 valign=bottom nowrap> <p>nil</p></td> 
+      <td width=37 valign=bottom nowrap> <p><b><span style='font-family:Courier'>nil</span></b></p></td> 
+      <td width=411 valign=top> <p>отсутствие значения</p></td> 
+    </tr> 
+  </table> 
+  <p><b>Функции</b></p> 
+   <table width="600" border="1" cellspacing="0" cellpadding="5" bordercolor="#595F60">
+  <tr>
+    <td width="50" valign="top"><p> Возврат </p></td>
+    <td width="337" valign="top"><p> Имя </p></td>
+    <td width="312" valign="top"><p> Описание </p></td>
+    <td width="337" valign="top"><p> Пример </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> AddJournalRecord ( int ) </p></td>
+    <td width="312" valign="top"><p> Добавить в журнал запись с таким ID , если такой записи в нем еще нет </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> AdvancedCameraMove( cameraStart, cameraEnd, duration, startOffset, endOffset ) </p></td>
+    <td width="312" valign="top"><p> Показывает часть траектории между двумя камерами. Для полной траектории указывается время duration , а также времена начала реально показываемого куска и его конца. </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> AttachEffectToUnitBone( effect id, unit ) </p></td>
+    <td width="312" valign="top"><p> Повесить партикл-эффект на персонажа </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> AttachEffectToWaypoint( effect id, waypoint name ) </p></td>
+    <td width="312" valign="top"><p> Повесить партикл-эффект на waypoint </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> BeginSequence( SkipFadeout ) </p></td>
+    <td width="312" valign="top"><p> Начинает скриптовый movies </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> BeginZone ( string ) </p></td>
+    <td width="312" valign="top"><p> Перейти на зону с таким именем </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> BP ( functionName ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает игру на паузу и открывает консоль, сразу перед тем, как скрипт собирается вызвать функцию с таким именем. Удобно для отладки скриптов </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> BP () </p></td>
+    <td width="312" valign="top"><p> Устанавливает игру на паузу и открывает консоль. Удобно для отладки скриптов </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> CameraLock( bLock = true ) </p></td>
+    <td width="312" valign="top"><p> Блокирует/разрешает перемещения камеры, по умолчанию блокирует </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> CameraMove( camera, time ) </p></td>
+    <td width="312" valign="top"><p> Плавно перемещает камеру из текущего положения в camera за time (в мс) </p></td>
+    <td width="337" valign="top"><p> CameraMove( GetCamera( 6 ), 5000 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> CameraSequence( camerasTable, time ) </p></td>
+    <td width="312" valign="top"><p> Проигрывает последовательность камер, id которых заданы в camerasTable . Интервал между камерами равен time </p></td>
+    <td width="337" valign="top"><p> a = {2,3,4}<br>
+        CameraSet( GetCamera( 1 ) )<br>
+        CameraSequence( a, 1000 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> CameraSet ( camera ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает камеру в положение camera </p></td>
+    <td width="337" valign="top"><p> CameraSet( GetCamera( 6 ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> CameraSetClipping( fMinDistance, fMaxDistance ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает новые расстояния до передней и задней clipping planes </p></td>
+    <td width="337" valign="top"><p> CameraSetClipping( 0.1, 500 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> CheckScenarioBlockJustComplete( nBlockOrder ) </p></td>
+    <td width="312" valign="top"><p> Возвращает для данного блока, пройден ли он &quot;только что&quot;. Если он только что пройден, то после вызова функции будет считаться, что он пройден &quot;не только что&quot;. </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> CinematicSloMo ( n ) </p></td>
+    <td width="312" valign="top"><p> Замедляет вывод ролика в n раз </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> ClueIsFound( clueName ) </p></td>
+    <td width="312" valign="top"><p> Есть ли улика clue с именем clueName у игрока в журнале </p></td>
+    <td width="337" valign="top"><p> ClueIsFound( 'clue' ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ClueShow( clueName ) </p></td>
+    <td width="312" valign="top"><p> Показать игроку улику clue </p></td>
+    <td width="337" valign="top"><p> ClueShow( 'clue' ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> CompleteAllBlocksBefore( BlockOrder ) </p></td>
+    <td width="312" valign="top"><p> Отметить как пройденные все блоки с номером меньше BlockOrder. Таким образом, становится доступен блок номер BlockOrder. </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> CreateAndActivateItem( unit, nRPGItemID ) </p></td>
+    <td width="312" valign="top"><p> Создать предмет nRPGItemID у персонажа unit и сделать его активным </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> group </p></td>
+    <td width="337" valign="top"><p> CreateGroup( name1, name2, ... ) </p></td>
+    <td width="312" valign="top"><p> Создание новой группы, name — имена персонажей </p></td>
+    <td width="337" valign="top"><p> g = CreateGroup( &quot;fritz&quot;, &quot;klaus&quot; ); g = CreateGroup(); </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> object </p></td>
+    <td width="337" valign="top"><p> CreateObject( ObjectID, waypoint, angle, name ) </p></td>
+    <td width="312" valign="top"><p> Создание объекта. ObjectID — из objects , waypoint — имя waypoint 'а, angle — угол, на который повернуть, в градусах, name — имя, для обращения из скрипта </p></td>
+    <td width="337" valign="top"><p> CreateObject( 528, &quot;wp1&quot;, 45, &quot;BigBox&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> route </p></td>
+    <td width="337" valign="top"><p> CreateRoute( name1, name2, … ) </p></td>
+    <td width="312" valign="top"><p> Создать route с waypoint' а ми name1, name2, ... </p></td>
+    <td width="337" valign="top"><p> route = CreateRoute( &quot;wp1&quot;, &quot;wp2&quot;, &quot;wp3&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> unit </p></td>
+    <td width="337" valign="top"><p> CreateUnit( PersID, PlayerID, name, waypoint, level ) </p></td>
+    <td width="312" valign="top"><p> Создание unit -а с указанными параметрами. Name — имя для обращения из script -а </p></td>
+    <td width="337" valign="top"><p> CreateUnit( 42, 0, &quot;NewUnit&quot;, &quot;wp1&quot;, 12 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> DelayGameStart () </p></td>
+    <td width="312" valign="top"><p> Задержать начало игры и начать movie sequence </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> DialogPlay( szDialogCode, bHeroOnLeftSide = true ) </p></td>
+    <td width="312" valign="top"><p> Проиграть диалог szDialogCode , герой находится с указанной стороны экрана </p></td>
+    <td width="337" valign="top"><p> DialogPlay( 'EComE1' ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> DestroyItemInHand( unit ) </p></td>
+    <td width="312" valign="bottom"><p> То, что у unit -а в руках, исчезает из игры </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> DialogModeBegin </p></td>
+    <td width="312" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> DialogModeBegin () </p></td>
+    <td width="312" valign="bottom"><p> Переводит игру в режим диалога </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> DialogModeEnd </p></td>
+    <td width="312" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> DialogModeEnd () </p></td>
+    <td width="312" valign="bottom"><p> Выходит из режима диалога </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> DialogModeSet </p></td>
+    <td width="312" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> DialogModeSet( TextID, ChoicesCount, ParamsCount, choics…, params… ) </p></td>
+    <td width="312" valign="bottom"><p> Выводит диалог с указанным текстом, кол-вом пунктов выбора и переменными (теги начиная от 1) </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> DialogPlayAsAcks ( szDialogCode ) </p></td>
+    <td width="312" valign="top"><p> Проиграть диалог как последовательность ack 'ов </p></td>
+    <td width="337" valign="top"><p> DialogPlayAsAcks( 'EComE1' ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> DividedDeploy() </p></td>
+    <td width="312" valign="top"><p> Высадить персонажей по waypoint -ам UnitHero , Unit 1 .. Unit 6 ( waypoint -ы находятся в папке Deploy ) </p></td>
+    <td width="337" valign="top"><p> DividedDeploy() </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> EndSequence( bRestoreCameraPos = false, bSkipFade = false ) </p></td>
+    <td width="312" valign="top"><p> Закончить movie , запущенный скриптом </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> EnableFeature ( строка ) </p></td>
+    <td width="312" valign="top"><p> Используется единственным образом: EnableFeature(&quot;reenter&quot;) разрешает заново заходить на зоны </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> EndSequencePart () </p></td>
+    <td width="312" valign="top"><p> Закончить часть movie , запущенного скриптом </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ExecCommand ( string ) </p></td>
+    <td width="312" valign="top"><p> Выполнить консольную команду </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ExitToChapter () </p></td>
+    <td width="312" valign="top"><p> Безусловный выход на карту региона </p></td>
+    <td width="337" valign="top"><p> ExitToChapter() </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> Explosion( nGrenadeID, WaypointName ) </p></td>
+    <td width="312" valign="top"><p> Подрывает в Waypoint 'е гранату с ID = nGrenadeID </p></td>
+    <td width="337" valign="top"><p> Explosion( 21, &quot;wp1&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> FadeIn() </p></td>
+    <td width="312" valign="top"><p> Весь экран постепенно проявляется (светлеет) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> FadeOut () </p></td>
+    <td width="312" valign="top"><p> Весь экран постепенно темнеет и становится полностью черным </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> item </p></td>
+    <td width="337" valign="top"><p> FindItem( id ) </p></td>
+    <td width="312" valign="top"><p> Найти первый попавшийся item с ItemID = id лежащий на зоне </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> Floor ( int ) </p></td>
+    <td width="312" valign="top"><p> Показать все этажи вплоть до указанного номера </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> camera </p></td>
+    <td width="337" valign="top"><p> GetCamera( CameraID ) </p></td>
+    <td width="312" valign="top"><p> Возвращает камеру по ID </p></td>
+    <td width="337" valign="top"><p> c = GetCamera( 6 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> GetCurrentZoneAILevel () </p></td>
+    <td width="312" valign="top"><p> Возвращает уровень персонажей противника </p></td>
+    <td width="337" valign="top"><p> nLevel = GetCurrentZoneAILevel() </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> number </p></td>
+    <td width="337" valign="top"><p> GetDifficulty () </p></td>
+    <td width="312" valign="top"><p> Возвращает текущий коэффициент сложности </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> GetDiplomacy( nPlayer1, nPlayer2 ) </p></td>
+    <td width="312" valign="top"><p> Возвращает дипломатию между игроками </p></td>
+    <td width="337" valign="top"><p> state = GetDiplomacy( 1, 2 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> float </p></td>
+    <td width="337" valign="top"><p> GetDistance( position1, position2 ) </p></td>
+    <td width="312" valign="top"><p> Возвращает расстояние между положениями в блоках ( tiles ) </p></td>
+    <td width="337" valign="top"><p> GetDistance( GetPos( GetUnit( 'fritz' ) ), GetWaypointPos( 'wp1' ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> string </p></td>
+    <td width="337" valign="top"><p> GetGlobalGameVar( strVal, strDefault ) </p></td>
+    <td width="312" valign="top"><p> Если переменная strVal есть, возвращается ее значение. Иначе возвращается значение по умолчанию strDefault </p></td>
+    <td width="337" valign="top"><p> nValue = GetGlobalGameVar( &quot;ECct&quot;, 1 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> group </p></td>
+    <td width="337" valign="top"><p> GetGroup( nID ) </p></td>
+    <td width="312" valign="top"><p> Получение существующей группы по ID </p></td>
+    <td width="337" valign="top"><p> g = GetGroup( 10 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GetHero() </p></td>
+    <td width="312" valign="top"><p> Возвращает ID героя </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> item </p></td>
+    <td width="337" valign="top"><p> GetItem( name ) </p></td>
+    <td width="312" valign="top"><p> Возвращает item по имени </p></td>
+    <td width="337" valign="top"><p> GetItem( 'rifle' ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> GetLastDialogResult() </p></td>
+    <td width="312" valign="top"><p> Возвращает результат работы диалога : &quot;1&quot; - нажата &quot;yes&quot;, &quot;0&quot; - нажат &quot;cancel&quot; </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> GetNextBlockOrder </p></td>
+    <td width="312" valign="top"><p> Выдает BlockOrder для _следующего_ блока. Если следующего блока нет, выдает 10000 </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> object </p></td>
+    <td width="337" valign="top"><p> GetObject( name ) </p></td>
+    <td width="312" valign="top"><p> Получить объект по имени </p></td>
+    <td width="337" valign="top"><p> object = GetObject( &quot;car&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> group </p></td>
+    <td width="337" valign="top"><p> GetParty () </p></td>
+    <td width="312" valign="top"><p> Возвращает всю группу </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> position </p></td>
+    <td width="337" valign="top"><p> GetPos( unit ) или GetPos( object ) </p></td>
+    <td width="312" valign="top"><p> Возвращает положение объекта или unit -а </p></td>
+    <td width="337" valign="top"><p> GetPos( GetUnit( 'fritz' ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GetScenarioNumber () </p></td>
+    <td width="312" valign="top"><p> Возвращает номер текущего сценария </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> GetTurn () </p></td>
+    <td width="312" valign="top"><p> Возвращает номер хода (ходы идут в том числе и в realtime со скоростью 1 раз в 20 секунд) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> unit </p></td>
+    <td width="337" valign="top"><p> GetUnit( name ) </p></td>
+    <td width="312" valign="top"><p> Возвращает unit -а по имени </p></td>
+    <td width="337" valign="top"><p> u = GetUnit( &quot;fritz&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> GetUnitDiplomacy( unit, nPlayer ) </p></td>
+    <td width="312" valign="top"><p> Возвращает дипломатию персонажа к игроку </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> unit </p></td>
+    <td width="337" valign="top"><p> GetUnitPK(unit) </p></td>
+    <td width="312" valign="top"><p> Возвращает Р anzerklein , надетый на unit . РК в игре - это тоже unit -ы, т.е. для одетого РК можно вызывать функции вроде UnitGet … и UnitSet ... </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> position </p></td>
+    <td width="337" valign="top"><p> GetWaypointPos( waypointName ) </p></td>
+    <td width="312" valign="top"><p> Возвращает положение waypoint 'а </p></td>
+    <td width="337" valign="top"><p> GetWaypointPos( 'wp1' ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupActivateWeapon( group, bActivate ) </p></td>
+    <td width="312" valign="top"><p> Все персонажи в группе group берут оружие в руки ( bActivate = true ) или убирают оружие ( false ) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> group </p></td>
+    <td width="337" valign="top"><p> GroupAddGroup( Group1, Group2 ) </p></td>
+    <td width="312" valign="top"><p> Возвращает сумму групп Group 1 и Group 2 </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupAddUnit( group, unit ) </p></td>
+    <td width="312" valign="top"><p> Добавление персонажа к группе </p></td>
+    <td width="337" valign="top"><p> GroupAddUnit( GetGroup( 10 ), GetUnit( &quot;fritz&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupAIMode( group, mode ) </p></td>
+    <td width="312" valign="top"><p> Включает/выключает контроль AI над этой группой персонажей </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> GroupCanFight( group ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если хотя бы один персонаж способен действовать (не unconscious и не dead ) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> GroupCanSee( group1, group2 ) </p></td>
+    <td width="312" valign="top"><p> Проверить, видит ли одна группа другую </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> GroupCanSeeUnit( group, unit ) </p></td>
+    <td width="312" valign="top"><p> Проверить, видит ли группа персонажа unit </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupCheat( group, cheat, on ) </p></td>
+    <td width="312" valign="top"><p> Включить/ выключить cheat для группы </p></td>
+    <td width="337" valign="top"><p> GroupCheat( group, CHEAT_NOAI, 1 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupDeleteUnit( group, unit ) </p></td>
+    <td width="312" valign="top"><p> Удалить персонаж из группы, если он принадлежит указанной группе </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> group </p></td>
+    <td width="337" valign="top"><p> GroupGetCross( Group1, Group2 ) </p></td>
+    <td width="312" valign="top"><p> Возвращает группу, содержащую элементы, принадлежащие и группе Group 1, и группе Group 2 </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> GroupGetID( group ) </p></td>
+    <td width="312" valign="top"><p> Получить ID группы </p></td>
+    <td width="337" valign="top"><p> n = GroupGetID( g ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> GroupGetSize( group ) </p></td>
+    <td width="312" valign="top"><p> Получить размер группы </p></td>
+    <td width="337" valign="top"><p> n = GroupGetSize( GetGroup( 10 ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> unit </p></td>
+    <td width="337" valign="top"><p> GroupGetUnit( group, n ) </p></td>
+    <td width="312" valign="top"><p> Получить n -ного по счету персонажа в группе </p></td>
+    <td width="337" valign="top"><p> u = GroupGetUnit( GetGroup( 10 ), 2 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> group </p></td>
+    <td width="337" valign="top"><p> GroupGetVisible( group ) </p></td>
+    <td width="312" valign="top"><p> Сделать видимой группу другого игрока </p></td>
+    <td width="337" valign="top"><p> g = GroupGetVisible( GetGroup( 2 ) ); </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupGiveXP( group, xp ) </p></td>
+    <td width="312" valign="top"><p> Выдает группе group xp опыта </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> GroupInArea( group, waypoint1, waypoint2 ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если группа находится в прямоугольнике, заданном waypoint 'ами </p></td>
+    <td width="337" valign="top"><p> GroupInArea( GetParty(), &quot;w1&quot;, &quot;w2&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> GroupIsCross( Group1, Group2 ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если группы Group 1 и Group 2 пересекаются </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> GroupIsDead( group ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если все в группе UnitIsDead () </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupKeepMoving ( group ) </p></td>
+    <td width="312" valign="top"><p> Продолжить движение группы после включения/выключения sequence </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupMoveToWaypoint( group, waypoint ) </p></td>
+    <td width="312" valign="top"><p> Начать движение группы идет к waypoint 'у </p></td>
+    <td width="337" valign="top"><p> GroupMoveToWaypoint( GetGroup( 2 ), &quot;wp1&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupRemove ( group ) </p></td>
+    <td width="312" valign="top"><p> Удаление группы </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupRemoveUnit( group, unit ) </p></td>
+    <td width="312" valign="top"><p> Удаление персонажа из группы </p></td>
+    <td width="337" valign="top"><p> GroupRemoveUnit( GetGroup( 10 ), GetUnit( &quot;fritz&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupRoaming( group, waypoint, apRadius ) </p></td>
+    <td width="312" valign="top"><p> Персонаж в указанной группе начинает ходить вокруг waypoint 'а не дальше, чем на apRadius AP </p></td>
+    <td width="337" valign="top"><p> GroupRoaming( group, 'wp1', 30 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupSetDirection( unit, direction ) </p></td>
+    <td width="312" valign="top"><p> Установить направление, в котором смотрят все персонажи в указанной группе </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupSetRoute( group, route, circled ) </p></td>
+    <td width="312" valign="top"><p> Ходить группой по маршруту route . Если circled не nil , то ходить циклически </p></td>
+    <td width="337" valign="top"><p> GroupSetRoute( GetGroup( 5 ), route, nil ); </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> GroupStop ( group ) </p></td>
+    <td width="312" valign="top"><p> Остановить движение группы </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> HasInventoryItemGroup(group,nItemID ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если у группы есть предмет nItemID </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> HasInventoryItemUnit(unit,nItemID) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если у персонажа есть предмет nItemID </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> HighlightClue( ptr, bool[true] ) </p></td>
+    <td width="312" valign="top"><p> Подсвечивает или убирает подсветку с unit -а или RPG item -а </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> HighlightUnitAlways( unit, bool b = true ) </p></td>
+    <td width="312" valign="top"><p> Если второй параметр true (по умолчанию это так), то над unit -ом загорается иконка Clue , даже если мы его не видим. Если false , иконка пропадает </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> IsEqual( p1, p2 ) </p></td>
+    <td width="312" valign="top"><p> Сравнивает два указателя на что-либо </p></td>
+    <td width="337" valign="top"><p> a = GetUnit( 'fritz' ); b = GetUnit( 'fritz' ); c = IsEqual( a, b ) == true </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> IsInterfaceAction () </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если выполняется интерфейсная команда, иначе nil </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> IsMissionTaken </p></td>
+    <td width="312" valign="top"><p> Возвращает, выбрал ли игрок следующую миссию </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p> bool </p></td>
+    <td width="337" valign="bottom"><p> IsReadyForNextBlock </p></td>
+    <td width="312" valign="bottom"><p> Возвращает, пройдено ли достаточное число зон для прохождения в след. блок </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p> bool </p></td>
+    <td width="337" valign="bottom"><p> IsRealTime </p></td>
+    <td width="312" valign="bottom"><p> Возвращает true, если realtime или sequence </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p> bool </p></td>
+    <td width="337" valign="bottom"><p> IsScenarioBlockComplete( nBlockOrder ) </p></td>
+    <td width="312" valign="bottom"><p> Возвращает, пройден ли игроком сценарный блок </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> IsUIActionIDPresent ( nId ) </p></td>
+    <td width="312" valign="bottom"><p> Заведена для того, чтобы можно было написать функцию WaitForUI , в других случаях лучше не вызывать </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> IsValid( ptr ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если ptr содержит допустимый указатель </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> string </p></td>
+    <td width="337" valign="top"><p> ItemGetName( item ) </p></td>
+    <td width="312" valign="top"><p> Возвращает имя предмета item </p></td>
+    <td width="337" valign="top"><p> name = ItemGetName( Item ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ItemRemove ( item ) </p></td>
+    <td width="312" valign="top"><p> Удаляет предмет item с карты </p></td>
+    <td width="337" valign="top"><p> ItemRemove( GetItem( 'rifle' ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ItemSetToWaypoint( item, 'wp' ) </p></td>
+    <td width="312" valign="top"><p> Перемещает предмет в waypoint с именем wp </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ItemUnload ( item ) </p></td>
+    <td width="312" valign="top"><p> Если предмет — огнестрельное оружие, обнуляет у него счетчик боезапаса </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> KillEmAll () </p></td>
+    <td width="312" valign="top"><p> Убить всех врагов на карте </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> LeaveToSubZone ( nSubZone ) </p></td>
+    <td width="312" valign="top"><p> Перейти на связанную зону с индексом nSubZone ; надо указать номер PassageObjectID </p></td>
+    <td width="337" valign="top"><p> LeaveToSubZone( 2 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p> int </p></td>
+    <td width="337" valign="bottom"><p> NumAvailableMissions() </p></td>
+    <td width="312" valign="bottom"><p> Возвращает число доступных миссий </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p> int </p></td>
+    <td width="337" valign="bottom"><p> NumMissionInBlock </p></td>
+    <td width="312" valign="bottom"><p> Возвращает номер успешной миссии в блоке. </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> ObjectCancelAction ( object ) </p></td>
+    <td width="312" valign="bottom"><p> Объект перестает &quot;держать часики&quot; и играть анимацию </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectClose( object ) </p></td>
+    <td width="312" valign="top"><p> Закрыть объект </p></td>
+    <td width="337" valign="top"><p> ObjectClose( GetObject( &quot;door&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectDestroy( object ) </p></td>
+    <td width="312" valign="top"><p> Уничтожить объект </p></td>
+    <td width="337" valign="top"><p> ObjectDestroy( GetObject( &quot;door&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> ObjectGetDestroyStage( object ) </p></td>
+    <td width="312" valign="top"><p> Возвращает текущую стадию разрушения для заданного объекта </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectGetHP( object ) </p></td>
+    <td width="312" valign="top"><p> Возвращает величину hit points объекта </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> string </p></td>
+    <td width="337" valign="top"><p> ObjectGetName ( object ) </p></td>
+    <td width="312" valign="top"><p> Возвращает имя объекта </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> ObjectIsOpened( object ) </p></td>
+    <td width="312" valign="top"><p> Узнать, открыт ли объект </p></td>
+    <td width="337" valign="top"><p> bOpened = ObjectIsOpened( GetObject( &quot;door&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectLockDoor( door, keyNumber, lockHardness ) </p></td>
+    <td width="312" valign="top"><p> Закрыть дверь на ключ keyNumber . Можно закрыть можно открытую дверь, окно, решетку и т.п. </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectOpen( object ) </p></td>
+    <td width="312" valign="top"><p> Открыть объект </p></td>
+    <td width="337" valign="top"><p> ObjectOpen( GetObject( &quot;door&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectPlaceInPocket ( object ) </p></td>
+    <td width="312" valign="top"><p> Убрать объект с карты в &quot;карман&quot; </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectPlayAnimation( object, nAnimationID ) </p></td>
+    <td width="312" valign="top"><p> Проиграть анимацию объектом </p></td>
+    <td width="337" valign="top"><p> ObjectPlayAnimation( GetObject( &quot;tumba&quot; ), 993 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectRemove ( object ) </p></td>
+    <td width="312" valign="top"><p> Удалить объект из игры </p></td>
+    <td width="337" valign="top"><p> ObjectRemove( GetObject( &quot;door&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectRestoreFromPocket ( object ) </p></td>
+    <td width="312" valign="top"><p> Поставить объект обратно на карту из &quot;кармана&quot; </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectSetDestroyStage( object, nStage ) </p></td>
+    <td width="312" valign="top"><p> Задать стадию разрушения объекта </p></td>
+    <td width="337" valign="top"><p> ObjectSetDestroyStage( GetObject( 'car' ), 2 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectSetToWaypoint( object, waypoint, angle ) </p></td>
+    <td width="312" valign="top"><p> Изменить положение объекта. Waypoint — новое положение, angle — новый угол </p></td>
+    <td width="337" valign="top"><p> ObjectSetToWaypoint( GetObject( &quot;BigBox&quot; ), &quot;wp1&quot;, 30 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ObjectUnlockDoor( door ) </p></td>
+    <td width="312" valign="top"><p> Открыть дверь </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> out (...) </p></td>
+    <td width="312" valign="top"><p> Вывести строку параметров в окне консоли </p></td>
+    <td width="337" valign="top"><p> out(&quot;You can write numbers like this&quot;..n) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> outGroup () </p></td>
+    <td width="312" valign="top"><p> Вывести состав группы в окно консоли </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> Pause () </p></td>
+    <td width="312" valign="top"><p> Устанавливает игру на паузу. Удобно для отладки скриптов </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> PlaceTemplate( nTemplateID, WaypointName ) </p></td>
+    <td width="312" valign="top"><p> Помещает template с TemplateID на текущий template в положение указываемое waypoint 'ом (нижний левый угол) </p></td>
+    <td width="337" valign="top"><p> PlaceTemplate( 2935, 'wp1' ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> sound </p></td>
+    <td width="337" valign="top"><p> Play3DSound( nDBSoundID, position ) </p></td>
+    <td width="312" valign="top"><p> Проигрывается 3 D -звук с id = nDBSoundID , источник находится в точке position </p></td>
+    <td width="337" valign="top"><p> Play3DSound( 333, GetWaypointPos( &quot;wp1&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> effect </p></td>
+    <td width="337" valign="top"><p> PlayEffect( nDBEffectID, position ) </p></td>
+    <td width="312" valign="top"><p> Проигрывается particle -эффект в точке position </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> PlayerGetMoney( nPlayerID ) </p></td>
+    <td width="312" valign="top"><p> Возвращает сумму денег игрока </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> group </p></td>
+    <td width="337" valign="top"><p> PlayerGetUnits( nPlayerID ) </p></td>
+    <td width="312" valign="top"><p> Возвращает группу заданного игрока </p></td>
+    <td width="337" valign="top"><p> GroupGetSize( PlayerGetUnits( 0 ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> group </p></td>
+    <td width="337" valign="top"><p> PlayerGetUnitsEx( nPlayerID, nCount ) </p></td>
+    <td width="312" valign="top"><p> Возвращает группу из unit -ов nCount `ного player -а с ID nPlayerID </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> PlayerGiveMoney( nPlayerID, nMoney ) </p></td>
+    <td width="312" valign="top"><p> Добавляет сумму денег игроку </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> PlayerGiveTurn( nPlayerID ) </p></td>
+    <td width="312" valign="top"><p> Передает ход игроку под номером nPlayerID </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> PlayerGiveTurn ( player ) </p></td>
+    <td width="312" valign="top"><p> Передает ход игроку с указанным номером </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> sound </p></td>
+    <td width="337" valign="top"><p> PlaySound( nDBSoundID ) </p></td>
+    <td width="312" valign="top"><p> Проигрывает 2 D -звук nDBSoundID </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> PlayerTakeMoney( nPlayerID, nMoney ) </p></td>
+    <td width="312" valign="top"><p> Отнимает сумму денег у игрока </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> PlayVideo ( path ) </p></td>
+    <td width="312" valign="top"><p> Проигрывает видео- sequence (в пути надо ставить двойные \\ — особенность lua ) </p></td>
+    <td width="337" valign="top"><p> PlayVideo( &quot;.\\cfg\\sequencename.seq&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> random( [min], max ) </p></td>
+    <td width="312" valign="top"><p> Возвращает случайное значение от min до max , min равен 0 по умолчанию </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> RecalcWaypointPos ( waypointName ) </p></td>
+    <td width="312" valign="top"><p> Если в результате массивных разрушений или PlaceTemplate waypoint сильно сдвинулся относительно своего начального местоположения, можно использовать эту функцию, чтобы он заново выбрал место поближе к начальному </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> Save ( name ) </p></td>
+    <td width="312" valign="top"><p> Делает запись текущего состояния игры с указанным именем. Удобно для отладки скриптов </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ScenarioAddGoal ( nGoalID ) </p></td>
+    <td width="312" valign="top"><p> Добавляет Scenario Goal в текущую зону </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ScenarioAddVisibleZone ( zoneName ) </p></td>
+    <td width="312" valign="top"><p> Сделать зону с таким именем видимой, в нее становится можно заходить </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> ScenarioGetTaskComplete( GoalID, taskNumber ) </p></td>
+    <td width="312" valign="top"><p> Возвращает, выполнено ли соответствующее подзадание </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ScenarioSetGoalComplete( nGoalID, bComplete[true] ) </p></td>
+    <td width="312" valign="top"><p> Завершить/провалить задание Goal , добавленное функцией ScenarioAddGoal </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ScenarioSetGoalVisible( nGoalID, bVisible[true] ) </p></td>
+    <td width="312" valign="top"><p> Делает задание GoalID видимым / невидимым </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ScenarioSetTaskComplete( nGoalID, iTask, bComplete[true] ) </p></td>
+    <td width="312" valign="top"><p> Завершить/провалить подзадание task , task 'и нумеруются с 0 </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ScriptShadows( bool Activate ) </p></td>
+    <td width="312" valign="top"><p> Запретить отрисовку теней </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> SetAmbientEffect ( nEffectID ) </p></td>
+    <td width="312" valign="top"><p> Анимирует освещение в соответствии с nEffectID </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> SetDiplomacy(player1, player2, state) </p></td>
+    <td width="312" valign="top"><p> Задать дипломатию между игроками </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> SetGlobalGameVar( szVar, strValue ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает глобальную переменную игры, используемую для контроля сюжета </p></td>
+    <td width="337" valign="top"><p> SetGlobalGameVar( &quot;EFCom&quot;, 1 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> SetMaxCriticalSeverity ( nSeverity ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает cheated Severity для всех critical (и наших и противника). Не действует, если включена опция always critical (мелкие критикалы всегда будут продолжать идти) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> SetTimeOfDay( nTime ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает время дня на зоне. nTime может быть DAY / NIGHT / ANYTIME </p></td>
+    <td width="337" valign="top"><p> SetTimeOfDay( NIGHT ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> SetTutorialMode( bOn ) </p></td>
+    <td width="312" valign="top"><p> Включает и выключает обучающий режим, включающий в себя выключение autosave и включает показ подсказок ( hints ) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> SetupAmbientLight ( nLightID ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает новое освещение </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ShowLoseDialog() </p></td>
+    <td width="312" valign="top"><p> Показывает LoseDialog </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ShowCursor ( bool ) </p></td>
+    <td width="312" valign="top"><p> Показать / спрятать курсор </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ShowHallOfFame () </p></td>
+    <td width="312" valign="top"><p> Показать таблицу рекордов </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ShowHint ( nHintID ) </p></td>
+    <td width="312" valign="top"><p> Вывести экран справки с заданным ID </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ShowLeaveZoneDialog ( nStringID ) </p></td>
+    <td width="312" valign="top"><p> Вывести диалог &quot;хотите ли выйти с зоны&quot; с указанной строкой </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> ShowLoseDialog () </p></td>
+    <td width="312" valign="top"><p> Вывести стандартный диалог &quot; миссия проиграна&quot; </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> Sleep ( nSegments ) </p></td>
+    <td width="312" valign="top"><p> Ничего не делать nSegments сегментов (где сегмент 1/20 секунды) </p></td>
+    <td width="337" valign="top"><p> Sleep( 10 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> SleepForTurn( n=1 ) </p></td>
+    <td width="312" valign="top"><p> Ждет, пока не пройдет n ходов, по умолчанию 1 </p></td>
+    <td width="337" valign="top"><p> SleepForTurn(); SleepForTurn( 2 ); </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> StartGame() </p></td>
+    <td width="312" valign="top"><p> Разрешить показывать игру и закончить sequence </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> StartThread( luaFunction ) </p></td>
+    <td width="312" valign="top"><p> Запускает функцию luaFunction в новом thread-е </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> StopEffect ( effect ) </p></td>
+    <td width="312" valign="top"><p> Останавливает проигрывание эффекта: effect — значение, возвращенное PlayEffect () </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> StopSound ( sound ) </p></td>
+    <td width="312" valign="top"><p> Останавливает проигрывание звука: sound — значение, возвращенное PlaySound () или Play 3 DSound () </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> TableGetSize( table ) </p></td>
+    <td width="312" valign="top"><p> Возвращает размер таблицы </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> TakeMission () </p></td>
+    <td width="312" valign="top"><p> Взять текущую миссию </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> TestFPS () </p></td>
+    <td width="312" valign="top"><p> Протестировать карту на fps </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> Trigger( chechkfunction, execfunction, [cicled], [latency] ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает триггер: checkfunction — проверяющая функция, execfunction — выполняемая по условию функция, cicled — зациклена ли проверка, latency — как часто проверять </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> uiShowLoot () </p></td>
+    <td width="312" valign="top"><p> Вывести экран трофеев </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> uiShowMissionSelection() </p></td>
+    <td width="312" valign="top"><p> Вывести экран выбора миссии </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> uiShowShop () </p></td>
+    <td width="312" valign="top"><p> Вывести экран магазина </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> uiShowTeamMngMenu () </p></td>
+    <td width="312" valign="top"><p> Вывести экран найма персонажей </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitActivateWeapon( unit, bActivate ) </p></td>
+    <td width="312" valign="top"><p> Персонаж достает оружие ( bActivate = true ) или убирает его ( false ) </p></td>
+    <td width="337" valign="top"><p> UnitActivateWeapon( GetUnit( 'fritz' ), false ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitAddToParty ( unit ) </p></td>
+    <td width="312" valign="top"><p> Присоединяет персонажа (наемника) к партии, при этом он не будет исчезать из партии после выхода с зоны. </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitAIMode( unit, mode ) </p></td>
+    <td width="312" valign="top"><p> Включает/выключает контроль AI над этим персонажем </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitApplyCritical( unit, criticalID ) </p></td>
+    <td width="312" valign="top"><p> Наносит критическое поражение указанному персонажу. Информация о criticalID берется из базы данных по ID </p></td>
+    <td width="337" valign="top"><p> UnitApplyCritical( GetUnit(&quot;fritz&quot;), 21 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitApplyCritical( unit, criticalLocation, critical ) </p></td>
+    <td width="312" valign="top"><p> Наносит критическое поражение указанному персонажу в указанное место hit location </p></td>
+    <td width="337" valign="top"><p> UnitApplyCritical( GetUnit(&quot;fritz&quot;), 0, 5 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitApplyTableCritical( unit, criticalID, nDC[N_MAX_DC] ) </p></td>
+    <td width="312" valign="top"><p> Наносит критическое поражение указанному персонажу с заданной степенью сложности проажения. Информация берется из базы данных по ID . nDC [ N _ MAX _ DC ] — номер сложности ( Severity ) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitAttachToCannon( unit, cannon, true/false ) </p></td>
+    <td width="312" valign="top"><p> Команда начать использовать стационарное оружие (пушку) или закончить это делать. </p>
+        <p> Указывается третьим аргументом false , чтобы выйти. AI - units сами не отойдут от пушки, пока функция не будет применена к ним с false . </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitAttackWaypoint( unit, waypoint ) </p></td>
+    <td width="312" valign="top"><p> Персонаж стреляет в точку waypoint </p></td>
+    <td width="337" valign="top"><p> UnitAttackWaypoint( GetUnit( &quot;hero&quot; ), &quot;wp1&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitCancelAction ( unit ) </p></td>
+    <td width="312" valign="top"><p> Отменить текущую команду </p></td>
+    <td width="337" valign="top"><p> UnitCancelAction( GetUnit( 'fritz' ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitCanFight( unit ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж способен действовать (не unconscious и не dead ) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitCanSee( unit, group ) </p></td>
+    <td width="312" valign="top"><p> Узнать, видит ли персонаж группу </p></td>
+    <td width="337" valign="top"><p> UnitCanSee( agent, heroes ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitCanSeeUnit( unit1, unit2 ) </p></td>
+    <td width="312" valign="top"><p> Узнать, видит ли персонаж персонажа </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitCheat( unit, cheat, on ) </p></td>
+    <td width="312" valign="top"><p> Включить/ выключить режим cheat для персонажа </p></td>
+    <td width="337" valign="top"><p> UnitCheat( GetUnit( &quot;fritz&quot; ), CHEAT_AP, 1 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitCreateItem( unit, nRPGItemID, bClue = false ) </p></td>
+    <td width="312" valign="top"><p> Создает в предметах персонажа новый предмет item . Если места недостаточно, предмет падает на землю. Если bClue = true — создается улика </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitDrawWeapon ( unit ) </p></td>
+    <td width="312" valign="top"><p> Персонаж достает огнестрельное оружие (если есть) и делает его активным. Предметы в слотах не учитываются </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitDropCorpse ( unit ) </p></td>
+    <td width="312" valign="top"><p> Бросить тело, которое несет персонаж </p></td>
+    <td width="337" valign="top"><p> UnitDropCorpse( GetUnit( 'fritz' ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> UnitGetAIState( unit ) </p></td>
+    <td width="312" valign="top"><p> Возвращает одно из чисел от 0 до 3. В файле s3constants.l заведены константы AI_CALM = 0, AI_ALAMED = 1, AI_FIGHTING = 2, AI_SCARED = 3 </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> UnitGetAmmoQuantityInHand ( unit ) </p></td>
+    <td width="312" valign="top"><p> Сколько патронов осталось в активном оружии </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p> int </p></td>
+    <td width="337" valign="bottom"><p> UnitGetDiplomacy( unit, playerID ) </p></td>
+    <td width="312" valign="bottom"><p> Возвращает diplomacy у указанного unit -а к игроку с указанным ID </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p> int </p></td>
+    <td width="337" valign="bottom"><p> UnitGetEffectiveEngSkill( unit ) </p></td>
+    <td width="312" valign="bottom"><p> Получить навык для разминирования с учетом инженерного предмета, если он в руках. </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p> int </p></td>
+    <td width="337" valign="bottom"><p> UnitGetFloor( unit ) </p></td>
+    <td width="312" valign="bottom"><p> Возвращает, на каком этаже стоит unit </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> string </p></td>
+    <td width="337" valign="top"><p> UnitGetName( unit ) </p></td>
+    <td width="312" valign="top"><p> Возвращает имя персонажа </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> UnitGetSkill( unit, nSkill ) </p></td>
+    <td width="312" valign="top"><p> Возвращает значение навыка nSkil для персонажа ( nSkill — одна из констант ST _*) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> UnitGetSkillMaxValue( unit, nSkill ) </p></td>
+    <td width="312" valign="top"><p> Возвращает максимальное значение навыка nSkill для персонажа </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> UnitGetToHitUnit( unit, target, nTargetHitLocation = HL_ANY ) </p></td>
+    <td width="312" valign="top"><p> Возвращает значение вероятности попадания ToHit в заданное место hit location unitTarget </p></td>
+    <td width="337" valign="top"><p> UnitGetToHitUnit( GetUnit( &quot;fritz&quot; ), GetUnit( &quot;rocco&quot; ), HL_HEAD ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int </p></td>
+    <td width="337" valign="top"><p> UnitGetToHitWaypoint( unit, waypoint, nTileHitLocation = THL_LOWER ) </p></td>
+    <td width="312" valign="top"><p> Возвращает значение вероятности попадания ToHit в заданную точку местности waypoint </p></td>
+    <td width="337" valign="top"><p> UnitGetToHitWaypoint( GetUnit( &quot;fritz&quot; ), &quot;wp1&quot;, THL_MIDDLE ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> group </p></td>
+    <td width="337" valign="top"><p> UnitGetVisible( unit ) </p></td>
+    <td width="312" valign="top"><p> Возвращает группу другого игрока, видимую данным персонажем </p></td>
+    <td width="337" valign="top"><p> g = UnitGetVisible( GetUnit( &quot;fritz&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitGiveRandomPerks ( unit ) </p></td>
+    <td width="312" valign="top"><p> Автоматически распределяет свободные очки умений указанному персонажу </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitGiveXP( unit, xp ) </p></td>
+    <td width="312" valign="top"><p> Выдает персонажу xp опыта </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitHealCriticals(unit, DC = -1) </p></td>
+    <td width="312" valign="top"><p> Вылечить критические поражения, если dc &lt; 0 — лечить все независимо от DC </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitHide ( unit ) </p></td>
+    <td width="312" valign="top"><p> Попытка замаскировать персонажа (аналог нажатия на кнопку hide ) </p></td>
+    <td width="337" valign="top"><p> UnitHide( GetUnit( &quot;fritz&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitHoldItem( unit, nRPGItemID ) </p></td>
+    <td width="312" valign="top"><p> Создает предмет и дает его персонажу в обход панели предметов (даже если там нет места). Убрать предмет можно повторным вызовом с несуществующим nRPGItemID (например, -1) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitInArea( unit, waypoint1, waypoint2 ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж находится в прямоугольнике, заданном waypoint -ами </p></td>
+    <td width="337" valign="top"><p> UnitInArea( GetHero(), &quot;w1&quot;, &quot;w2&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitIsAction( unit ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж выполняет команду, иначе nil </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitIsCarryingCorpse( unit, corpse ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж несет тело </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitIsDead( unit ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж погиб, иначе nil </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitIsHearGroup( unit, group ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж слышит кого-нибудь из группы group </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitIsHearUnit( unit, target ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж слышит target </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitIsSeeUnit( watcher, target ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если наблюдатель видит target </p></td>
+    <td width="337" valign="top"><p> bVisible = UnitIsSeeUnit( GetUnit( &quot;fritz&quot; ), GetUnit( &quot;rocco&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitIsUnconscious( unit ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж потерял сознание и лежит </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitIsUsingCannon( unit ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж сидит за стационарным оружием </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitIsWeaponInHand( unit, weapon ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж держит в руке оружие вида weapon ( WP _ GRENADE , WP _ MELEE ) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> bool </p></td>
+    <td width="337" valign="top"><p> UnitIsWearingPK( unit ) </p></td>
+    <td width="312" valign="top"><p> Возвращает true , если персонаж находится в бронекостюме </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitKeepMoving ( unit ) </p></td>
+    <td width="312" valign="top"><p> Продолжить движение персонажей после включения/выключения sequence </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitKill( unit, bBloodyDeath=false ) </p></td>
+    <td width="312" valign="top"><p> Убить персонажа. Если bBloodyDeath = true , то персонажа разрывает на части </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> unit </p></td>
+    <td width="337" valign="top"><p> UnitLeavePK( unit ) </p></td>
+    <td width="312" valign="top"><p> Персонаж выходит из бронекостюма. Функция возвращает бронекостюм, в котором он сидел </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitLockPose( unit, bLock ) </p></td>
+    <td width="312" valign="top"><p> Включает и выключает режим, в котором персонажи не меняют позу </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitMakeUnconscious ( unit ) </p></td>
+    <td width="312" valign="top"><p> Перевести персонажа в бессознательное состояние </p></td>
+    <td width="337" valign="top"><p> UnitMakeUnconscious( GetUnit( 'fritz' ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitMoveInventoryToStore ( unit ) </p></td>
+    <td width="312" valign="top"><p> Забрать у персонажа все предметы и положить на склад </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitMoveToWaypoint( unit, waypointName ) </p></td>
+    <td width="312" valign="top"><p> Персонаж идет к точке c именем waypointName </p></td>
+    <td width="337" valign="top"><p> UnitMoveToWaypoint( GetUnit( &quot;fritz&quot;), &quot;wp1&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitPlaceInPocket( unit ) </p></td>
+    <td width="312" valign="top"><p> Спрятать персонажа в «карман» </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitPlayAnimation( unit, nAnimationID, bCircled ) </p></td>
+    <td width="312" valign="top"><p> Персонаж проигрывает анимацию с ID = nAnimationID . Если bCircled == true то анимация проигрывается в цикле </p></td>
+    <td width="337" valign="top"><p> UnitPlayAnimation( GetUnit( &quot;fritz&quot; ), 2361, true ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitRegenerateVP( unit, nVP ) </p></td>
+    <td width="312" valign="top"><p> Отлечить указанное число VP </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitReload ( unit ) </p></td>
+    <td width="312" valign="top"><p> Перезарядить оружие персонажа </p></td>
+    <td width="337" valign="top"><p> UnitReload( GetUnit( &quot;fritz&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitRemove( unit ) </p></td>
+    <td width="312" valign="top"><p> Удаляет персонажа с карты </p></td>
+    <td width="337" valign="top"><p> UnitRemove( GetUnit( 'enemy' ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitRemoveFromParty( unit, newPlayerID ) </p></td>
+    <td width="312" valign="top"><p> Убирает персонажа из группы и передает его под управление игроку номер newPlayerID . Если сделать UnitRemoveFromParty ( unit , 0 ), он останется под контролем игрока, но по окончании миссии покинет нашу группу. </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitRemoveInventoryItem( unit, itemID ) </p></td>
+    <td width="312" valign="top"><p> Удалить предмет ID , находящийся у персонажа (в руках или в inventory ) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitRestoreFromPocket( unit ) </p></td>
+    <td width="312" valign="top"><p> Вернуть персонажа из «кармана» </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitRoaming( unit, waypoint, apRadius ) </p></td>
+    <td width="312" valign="top"><p> Персонаж начинает ходить вокруг точки waypoint не дальше, чем на apRadius (в единицах AP ) </p></td>
+    <td width="337" valign="top"><p> UnitRoaming( GetUnit( 'enemy' ), 'wp1', 30 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSayAck( unit, nCondition ) </p></td>
+    <td width="312" valign="top"><p> Произнести реплику ( acknowledgment ) персонажем, указатель на которого передан первым параметром, номер условия condition — вторым </p></td>
+    <td width="337" valign="top"><p> SayAck(owner,100) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSelectSlot ( unit , 0/1 ) </p></td>
+    <td width="312" valign="top"><p> Выбрать активное окно ( slot ) у персонажа, первое (0) или второе (1). </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetAnimSpeed( unit, speed ) </p></td>
+    <td width="312" valign="top"><p> Задать скорость анимации speed = число от 0 до бесконечности. На это число будет умножаться время выполнения любой анимации, кроме ходьбы - ходьба при этом работает неверно. Когда перестанет быть нужным, надо сделать UnitSetAnimSpeed ( unit ,1 ), т.е. установить нормальную скорость. </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetBody(unit, modelID) </p></td>
+    <td width="312" valign="top"><p> Задать персонажу модель тела с данным ID </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetCanTalk( unit, bCanTalk ) </p></td>
+    <td width="312" valign="top"><p> Задает, можно ли поговорить с персонажем </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetCivilianLogic( unit, nAPRadius ) </p></td>
+    <td width="312" valign="top"><p> Задает логику panic + roaming , когда нет врагов </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetDialog( unit, dialogCode ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает диалог, выполняемый при выборе персонажа щелчком мыши </p></td>
+    <td width="337" valign="top"><p> UnitSetDialog( GetUnit( 'enemy' ), 'EComDlg1' ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetDiplomacy( unit, nPlayer, state ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает дипломатию state между персонажем и указанным игроком </p></td>
+    <td width="337" valign="top"><p> UnitSetDiplomacy( GetUnit( &quot;fritz&quot; ), 1, 0 ) </p></td>
+  </tr>
+
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetDirection( unit, direction ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает направление, в котором смотрит персонаж </p></td>
+    <td width="337" valign="top"><p> UnitSetDirection( GetUnit( &quot;fritz&quot; ), DIR_LEFT ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetFearLogic( unit ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает логику «убегать» с учетом укрытий </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetGuardLogic( unit, nAPRadius = 4 ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает логику «охранять» </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetMeleeMode( unit, mode ) </p></td>
+    <td width="312" valign="top"><p> Задает режим использования оружия ближнего боя (ножей), mode может быть одной из двух констант MM _ MELEE , MM _ THROW </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetNormalLogic( unit ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает стандартную логику </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetPanicLogic( unit ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает логику panic </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetPlayer( unit, nPlayer ) </p></td>
+    <td width="312" valign="top"><p> Приписывает персонажа указанному игроку </p></td>
+    <td width="337" valign="top"><p> UnitChangePlayer( GetUnit (&quot;fritz&quot;), 0 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetPose( unit, pose ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает предпочтительную позу </p></td>
+    <td width="337" valign="top"><p> UnitSetPose( GetUnit( &quot;fritz&quot; ), POSE_WALK ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetRetreatLogic( unit, 'waypoint' ) </p></td>
+    <td width="312" valign="top"><p> Задать движение персонажа к заданной точке, при которой движение имеет более высокий приоритет, чем атака </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetRoute( unit, route, circled ) </p></td>
+    <td width="312" valign="top"><p> Задает маршрут для персонажа. Если параметр circled не nil , то персонаж ходит в цикле </p></td>
+    <td width="337" valign="top"><p> UnitSetRoute( GetUnit(&quot;fritz&quot;), route, nil ); UnitSetRoute( GetUnit(&quot;officer&quot;), CreateRoute( &quot;wp1&quot;, &quot;wp3&quot; ), 1 ); </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetScriptLogic( unit ) </p></td>
+    <td width="312" valign="top"><p> Персонаж ждет скриптовой команды </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetShootMode( unit, shootMode ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает персонажу режим стрельбы </p></td>
+    <td width="337" valign="top"><p> UnitSetShootMode( GetUnit( &quot;fritz&quot; ), SM_LONGBURST ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetSkill( unit, nSkill, nValue ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает персонажу значение навыка nSkil . ( nSkill — одна из констант ST _*) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetSkillMaxValue( unit, nSkill, nNewMaxValue ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает новое максимальное значение навыка nSkill </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetToHit( unit, nToHit = -1 ) </p></td>
+    <td width="312" valign="top"><p> Устанавливает постоянную вероятность попадания nToHit во все цели. Если nToHit &lt; 0, то считается честный ToHit </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetToWaypoint( unit, waypointName ) </p></td>
+    <td width="312" valign="top"><p> Персонаж устанавливается в waypointName </p></td>
+    <td width="337" valign="top"><p> UnitSetToWaypoint( GetUnit( &quot;fritz&quot;), &quot;wp1&quot; ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetWishPose( unit, pose ) </p></td>
+    <td width="312" valign="top"><p> Задает позу, в которой персонаж будет передвигаться </p></td>
+    <td width="337" valign="top"><p> UnitSetWishPose( GetUnit( 'fritz' ), POSE_RUN ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSetXPLevel( unit, nLevel ) </p></td>
+    <td width="312" valign="top"><p> Увеличивает уровень персонажа добавлением опыта </p></td>
+    <td width="337" valign="top"><p> UnitSetXPLevel( GetUnit(&quot;fritz&quot;), 10 ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitShoot( unit, target, hitLocation ) </p></td>
+    <td width="312" valign="top"><p> Персонаж стреляет в указанную цель в hitLocation </p></td>
+    <td width="337" valign="top"><p> UnitShoot( GetUnit( &quot;fritz&quot; ), GetUnit( &quot;rocco&quot; ), HL_HEAD ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitShootPrepare( unit, unitTarget, nHitLocation ) </p></td>
+    <td width="312" valign="top"><p> Персонаж прицеливается в цель unitTarget на высоту указанной nHitLocation </p></td>
+    <td width="337" valign="top"><p> UnitShootPrepare( GetUnit( &quot;fritz&quot; ), GetUnit( &quot;rocco&quot; ), HL_HEAD ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"></td>
+    <td width="337" valign="top"><p> UnitStop ( unit ) </p></td>
+    <td width="312" valign="top"><p> Остановить движение персонажа </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitSwitchToGrenade ( unit ) </p></td>
+    <td width="312" valign="top"><p> Сделать активной гранату (если есть) </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitTakeCorpse( unit, corpse ) </p></td>
+    <td width="312" valign="top"><p> Подобрать персонажем тело corpse </p></td>
+    <td width="337" valign="top"><p> UnitTakeCorpse( GetUnit( 'fritz' ), GetUnit( 'rocco' ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitTakeObject( unit, item ) </p></td>
+    <td width="312" valign="top"><p> Подобрать персонажем указанный предмет </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitTakePerk( unit, perkID ) </p></td>
+    <td width="312" valign="top"><p> Взять указанное умение perkID </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> UnitThrowWeaponOut ( unit ) </p></td>
+    <td width="312" valign="bottom"><p> Выбросить оружие из активного слота на землю </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p> int,int,int </p></td>
+    <td width="337" valign="bottom"><p> UnitWeaponGetDurability(unit) </p></td>
+    <td width="312" valign="bottom"><p> П олучить три значения: durability, current maximum durability, maximum durability активного оружия </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> UnitWeaponRepairAsOnBase ( unit ) </p></td>
+    <td width="312" valign="bottom"><p> Починить оружие так, как это делалось бы на базе (не считая денег) </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> UnitWeaponRepairBroken(unit,skill) </p></td>
+    <td width="312" valign="bottom"><p> Починить оружие так, как это сделал бы инженер при помощи чинящего предмета с таким суммарным навыком (свой инженерный навык + предмет) </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> UnitWeaponRepairJammed(unit,skill) </p></td>
+    <td width="312" valign="bottom"><p> Починить заклинившее оружие так, как это сделал бы инженер с таким навыком </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> UnitWeaponSetBroken ( unit ) </p></td>
+    <td width="312" valign="bottom"><p> Сломать активное оружие </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> UnitWeaponSetDurability(unit, durability) </p></td>
+    <td width="312" valign="bottom"><p> Установить такую durability активному оружию </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> UnitWeaponSetDurability(unit, durability, curMaxDurability) </p></td>
+    <td width="312" valign="bottom"><p> У становить такие durability, current maximum durability активному оружию </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> UnitWeaponSetDurability(unit, durability, curMaxDurability,maxDurability) </p></td>
+    <td width="312" valign="bottom"><p> У становить такие durability, current maximum durability, maximum durability активному оружию </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="bottom"><p> UnitWeaponSetJammed ( unit ) </p></td>
+    <td width="312" valign="bottom"><p> Заклинить активное оружие </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> UnitWearPK( unit, unitPK ) </p></td>
+    <td width="312" valign="top"><p> Забраться в бронекостюм unitPK </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> WaitForGroup ( group ) </p></td>
+    <td width="312" valign="top"><p> Ждать, пока все персонажи группы закончат свои действия </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> WaitForGroupRoute ( group ) </p></td>
+    <td width="312" valign="top"><p> Ждать, пока группа не завершит маршрут </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> WaitForInterface(), WaitForInterface( AT_DIALOG ) </p></td>
+    <td width="312" valign="top"><p> Выполнение скрипта приостанавливается до завершения движения камеры. Во втором варианте — до завершения диалога </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> WaitForObject ( object ) </p></td>
+    <td width="312" valign="top"><p> Выполнение скрипта приостанавливается до выполнения команды object -ом (обычно — проигрывание анимации) </p></td>
+    <td width="337" valign="top"><p> WaitForObject( GetObject( &quot;tumba&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> WaitForPassCalc () </p></td>
+    <td width="312" valign="top"><p> Выполнение скрипта приостанавливается до выполнения всех расчетов проходимости </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> WaitForUnit ( unit ) </p></td>
+    <td width="312" valign="top"><p> Выполнение скрипта приостанавливается до выполнения команды персонажем </p></td>
+    <td width="337" valign="top"><p> WaitForUnit( GetUnit( &quot;fritz&quot; ) ) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> WaitForUnitRoute( unit ) </p></td>
+    <td width="312" valign="top"><p> Ждать, пока персонаж не завершит движение по маршруту </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="bottom"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> WantTurnBased ( bool ) </p></td>
+    <td width="312" valign="bottom"><p> Запретить/разрешить real time на зоне. Если вызвать WantTurnBased ( true ), то realtime прекращается и не может начаться до тех пор, пока не будет вызвано WantTurnBased ( false ) </p></td>
+    <td width="337" valign="bottom"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p> int, unit </p></td>
+    <td width="337" valign="top"><p> WhoHasInventoryItem ( nItemID ) </p></td>
+    <td width="312" valign="top"><p> В nNum будет записано количество предметов на руках у всех персонажей, в pWho — какой-нибудь из персонажей. </p></td>
+    <td width="337" valign="top"><p> quantity,owner = HasInventoryItem(112) </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> Win ( stringID = 20238 ) </p></td>
+    <td width="312" valign="top"><p> Выполнить все задания и показать диалог выхода с зоны с заданным текстом. По умолчанию - &quot;You can leave zone&quot; </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+  <tr>
+    <td width="50" valign="top"><p>&nbsp; </p></td>
+    <td width="337" valign="top"><p> YesNoDialog( int nStringID ) </p></td>
+    <td width="312" valign="top"><p> Вывести диалог Yes / No с указанным текстом </p></td>
+    <td width="337" valign="top"><p>&nbsp; </p></td>
+  </tr>
+</table>
+
+<p><strong> События (функции, активизирующиеся по тому или иному событию и передающие в себя указанные переменные) </strong></p>
+
+  <table width="600" border="1" cellspacing="0" cellpadding="5" bordercolor="#595F60">
+  <tr>
+    <td width="249" valign="top"><p><strong> Имя</strong><strong></strong></p></td>
+    <td width="586" valign="top"><p><strong> Описание</strong><strong></strong></p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnOpenObject ( unit , object ) </p></td>
+    <td width="586" valign="bottom"><p> При открывании персонажем объекта object </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnCloseObject ( unit , object ) </p></td>
+    <td width="586" valign="bottom"><p> При закрывании персонажем объекта object </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnDialogPhrase ( szDialogCode , nPhrase ) </p></td>
+    <td width="586" valign="bottom"><p> При проигрывании фразы nPhrase диалога szDialogCode </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnTalk ( HeroUnit , TargetUnit ) </p></td>
+    <td width="586" valign="bottom"><p> Когда главный герой хочет поговорить с персонажем TargetUnit </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnDialogFinished ( szDialogCode ) </p></td>
+    <td width="586" valign="bottom"><p> При завершении диалога </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnMineTriggered( unit ) </p></td>
+    <td width="586" valign="bottom"><p> При подрыве мины . Значение unit может быть равно nil , если мина сработала от повреждений </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnClickUsable ( unit , object ) </p></td>
+    <td width="586" valign="bottom"><p> Если при выбранном персонаже unit щелкнуть по используемому объекту object </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnEnterZone () </p></td>
+    <td width="586" valign="bottom"><p> Вызывается после загрузки зоны по истечении одного временного сегмента </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnMineDiffusion( object, success ) </p></td>
+    <td width="586" valign="bottom"><p> Позволяет обработать разминирование объекта. Success = true значит, что разминирование прошло успешно. Object — это разминируемый предмет (ловушка на дверь/окно/ящик, или собственно мина) </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnShotAtUnit ( unit ) </p></td>
+    <td width="586" valign="bottom"><p> Если кто-то выстрелил в персонажа </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnOpenInventrory () </p></td>
+    <td width="586" valign="bottom"><p> На открывание панели предметов </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnCloseInventory () </p></td>
+    <td width="586" valign="bottom"><p> На закрывание панели предметов </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnStartTurn( player ) </p></td>
+    <td width="586" valign="bottom"><p> На начало хода игрока player </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnUnitNeedCommand ( unit ) </p></td>
+    <td width="586" valign="bottom"><p> Персонажу необходимо отдать команду. Если ее нет — конец хода. Применяется вместе с UnitSetScriptLogic </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnPlayerLose() </p></td>
+    <td width="586" valign="bottom"><p> Когда главный герой погиб </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnUnitDamageUnit(unit, unit) </p></td>
+    <td width="586" valign="bottom"><p> Когда персонаж нанес урон другому персонажу </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnUnitDeath ( unit ) </p></td>
+    <td width="586" valign="bottom"><p> Когда персонаж погиб или потерял сознание </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnUnitKillUnit(unit, unit) </p></td>
+    <td width="586" valign="bottom"><p> Когда персонаж убил другого персонажа </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnExit </p></td>
+    <td width="586" valign="bottom"><p> Показывается на выходе из зоны. Определена в common . l Если вы ее переопределяете, не забудьте вызвать ShowLeaveZoneDialog () </p></td>
+  </tr>
+  <tr>
+    <td width="249" valign="top"><p> OnWeaponBroken( unit, a, b ) </p></td>
+    <td width="586" valign="bottom"><p> a = 1 значит, что заклинило, b = 1 значит, что сломалось </p></td>
+  </tr>
+</table>
+		
+		</div>
+		</td>
+	</tr>	
+</table>
+
+
+
+</body>
+</html>

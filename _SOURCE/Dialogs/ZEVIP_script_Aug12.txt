@@ -1,0 +1,661 @@
+DEBUG=0
+TESTMODE=1
+
+if(DEBUG == 1) then
+	ExecCommand("cheat_showall 1")
+end
+
+function testZoneInit()
+	if(TESTMODE == 1) then
+		GVPiterTrade = 0
+		GVZonesPassed = 2
+		--GVConvoyQuest = CQ_WITHCAR
+		GVPiterDeal=PQ_ENEMY
+		UnitSetCanTalk(GetUnit("STOREMAN"))
+		sellConst=0.25
+		piterShowStore = 0
+		--giveMoney(3000)
+		GVPiterMoney = 2000
+		addZone( "ZEVip" )
+	end
+end 
+
+-- VARS
+sent=GetUnit("GateGuard1")
+piter=GetUnit("Piter")
+bandits = PlayerGetUnits(1)
+sniper = GetUnit("sniper1")
+sniper2 = GetUnit("sniper2")
+mob1 = GetUnit("mob1")
+mike = GetUnit("Mike")
+storeman = GetUnit("STOREMAN")
+caratelMode = false
+talkWithSent = 0
+talkEnabled = true
+piterFirstTalk = true
+sentFirstTalk = true
+toKillHero = 0
+attemptPiterNoMoney = 0
+noSaleCar = 0
+-- END VARS
+
+function placeBritForces()
+	PlaceTemplate(1500036,"zero0")
+	PlaceTemplate(1500037,"zero1")
+	PlaceTemplate(1500038,"zero2")
+	SetLeaveZoneMode( true )
+	SetDiplomacy(0,1,DS_ENEMY)
+	SetDiplomacy(1,0,DS_ENEMY)
+	SetDiplomacy(0,10,DS_ENEMY)
+	SetDiplomacy(10,0,DS_ENEMY)
+	SetDiplomacy(1,10,DS_ENEMY)
+	SetDiplomacy(10,1,DS_ENEMY)
+end
+
+function startBritAssault()
+	initEnemyPlayer(10)
+	addPerksToGroup(10)
+	if(UnitCanFight(piter)) then
+		dialogBlockStart(true)
+		WaitForUIEx(DialogPlay("ZEVipBastard"))
+		WaitForUIEx(DialogPlay("ZEVipHeroAmbush"))
+		EndSequenceEx()
+		dialogBlockEnd()
+	end
+	StartThread(bFcheckMansion)
+	StartThread(guardFollow)
+end
+
+function bFcheckMansion()
+	local britForces = PlayerGetUnits(10)
+	while GroupCanFight(britForces) do
+		for i = 0, GroupGetSize( britForces ) - 1 do
+			local unit = GroupGetUnit( britForces, i )
+			if(UnitCanFight(unit)) then
+			UnitSetSwarmLogic( unit, "bf"..random(1,11) )
+			end
+		end
+		SleepForTurn(5)
+	end
+end
+
+function callEnforce()
+	enforce = GetGroup(1500001)
+	for i = 0, GroupGetSize( enforce ) - 1 do
+        local unit = GroupGetUnit( enforce, i )
+		if( unitIsActive(unit) ) then
+			UnitCancelAction( unit )
+			WaitForUnit( unit )
+			UnitSetNormalLogic( unit )
+			UnitSetPose( unit, POSE_RUN )
+			WaitForUnit( unit )
+			local r = i + 1
+			UnitSetToWaypoint(unit,"amb"..r)
+			WaitForUnit( unit )
+		end
+	end
+
+end
+
+
+
+function processDelayedEnter()
+	if(IsValid(bandits) and (not GroupCanFight(bandits))) then
+		bandits = nil
+	end
+	removeDeadEx()
+	startConvoyTricks(1153010)
+	if(unitIsActive(piter)) then
+		generateShop( SH_PITER, piterStuff )
+	end	
+	bandits = PlayerGetUnits(1)
+	if(not startCaratel()) then
+		if( caratelPlaced and isTimeExpired( "caratelsLeave",true ) ) then 
+			GroupRemove( PlayerGetUnits(1) ) 
+		end
+	else
+		caratelMode = true
+	end
+	initEnemyPlayer(1)
+	addPerksToGroup(1)
+	--if(GVLarryQuest==LQ_DONED) then
+	--	UnitRestoreFromPocket(larry)
+	--	UnitPutWeaponToBackpack(larry )
+	--	WaitForUnit(larry)
+	--	pasteUnit(larry)
+	--end
+	return(true)
+end
+
+function heroAtArea()
+	local ret = (UnitInArea(GetHero(),"g1","g2") and 
+		not UnitInArea(GetHero(),"g3","g4"))-- and
+		--GroupCanSeeUnit(PlayerGetUnits(1),GetHero())) --Enemies cant see him at all if hide
+	return(ret)	
+end
+
+function someAtArea()
+	for i=1,GroupGetSize(GetParty())-1 do
+		local unit = GroupGetUnit(GetParty(),i)
+		if(unitIsActive(unit)) then
+			local name = UnitGetName(unit)
+			
+			if( (name~="MIKE") and 
+				(name~="PITER") and
+				UnitInArea(unit,"g1","g2")) then --and
+				--GroupCanSeeUnit(PlayerGetUnits(1),unit)) then
+				return(true)
+			end
+		end	
+	end	
+	return(false)
+end
+
+function checkBoxDestroy()
+	local box1 = GetObject("box1")
+	local box2 = GetObject("box2")
+	while((ObjectGetDestroyStage(box1)==0) and
+		(ObjectGetDestroyStage(box2)==0)) do
+		Sleep(20)
+	end	
+	if((GetDiplomacy(0,1)~=DS_ENEMY) and
+		(not caratelMode) and
+		(GVPiterTrade==0)) then
+		dialogBlockStart(true)
+		if(makeEnemy()) then
+			WaitForUIEx(DialogPlay("badopen"))
+			diceForTurn()
+		end	
+		dialogBlockEnd()
+	end	
+end
+
+
+function isIntruded()	
+	if(toKillHero > 0) then
+		if (UnitInArea(GetHero(),"g1","g2") and not UnitInArea(GetHero(),"ha1","ha2"))then
+			return(true)
+		end
+	end
+	--if((GVPiterTrade==1) or piterShowStore) then
+	if(GVPiterTrade==1) then
+		return(false)
+	else
+		local intruded = someAtArea()
+		--if((not talkWithSent) and (GVTravelWithBandits~=1)) then
+		if(talkWithSent == 0) then
+			intruded = intruded or heroAtArea()
+		else
+			intruded = intruded or (heroAtArea() and UnitHasFireArms(GetHero()))
+		end
+		return(intruded)
+	end	
+end
+
+function makeAgoodSniper(unit)
+	UnitAIMode(unit,false)
+	UnitSetWishPose(unit,POSE_CROUCH)
+	UnitSetPose(unit,POSE_CROUCH)
+	WaitForUnit(unit)
+	UnitSetToHit(unit,GetDifficulty()*33)
+	UnitSetSkillMaxValue(unit,ST_SPOT,200)
+	UnitSetSkill(unit,ST_SPOT,200)
+	UnitSetSkillMaxValue(unit,ST_STEALTH,150)
+	UnitSetSkill(unit,ST_STEALTH,150)
+	UnitLockPose(unit,true)
+	UnitHide(unit)
+	UnitAIMode(unit,true)
+end
+
+function callGuards()
+	bGuard1 = GetUnit("bGuard1")
+	if( unitIsActive(bGuard1) ) then
+		UnitCancelAction( bGuard1 )
+		WaitForUnit( bGuard1 )
+		UnitSetNormalLogic( bGuard1 )
+		UnitSetPose( bGuard1, POSE_RUN )
+		WaitForUnit( bGuard1 )
+		UnitMoveToWaypoint(bGuard1,"bguard1")
+		WaitForUnitRoute( bGuard1 )
+		--UnitSetSwarmLogic(bGuard1,"bguard1")
+		UnitSetGuardLogic(bGuard1,5)
+		UnitLookAtUnit(bGuard1,piter)
+		WaitForUnit( bGuard1 )
+	end
+	bGuard2 = GetUnit("bGuard2")
+	if( unitIsActive(bGuard2) ) then
+		UnitCancelAction( bGuard2 )
+		WaitForUnit( bGuard2 )
+		UnitSetNormalLogic( bGuard2 )
+		UnitSetPose( bGuard2, POSE_RUN )
+		WaitForUnit( bGuard2 )
+		UnitMoveToWaypoint(bGuard2,"bguard2")
+		WaitForUnitRoute( bGuard2 )
+		--UnitSetSwarmLogic(bGuard2,"bguard2")
+		UnitSetGuardLogic(bGuard2,5)
+		UnitLookAtUnit(bGuard2,piter)
+		WaitForUnit( bGuard2 )
+	end	
+end
+
+function guardFollow()	
+	Sleep(300)
+	local bguards = GetGroup(1500002)
+	while GroupCanFight( bguards ) do
+		CreateWaypoint( "playerHero", GetHero() )
+		RecalcWaypointPos( "playerHero" )	
+		
+		for i = 0, GroupGetSize( bguards ) - 1 do
+        	local unit = GroupGetUnit( bguards, i )
+			if( unitIsActive(unit)) then --and 
+		--		--GetDistance( GetPos( unit ), GetWaypointPos( "playerGroup" ) ) < random( 10, 20 ) ) and 
+		--		--(not Units[ unit ])) then
+				
+				UnitCancelAction( unit )
+				WaitForUnit( unit )
+				UnitSetNormalLogic( unit )
+				UnitSetPose( unit, POSE_WALK )
+				WaitForUnit( unit )
+				UnitSetSwarmLogic(unit,"playerHero")
+				--UnitRoaming( unit, "playerHero", 20)
+		--		Units[ unit ] = true
+			end
+		end
+		--GroupMoveToWaypoint(bguards,"playerHero")
+		--WaitForGroupRoute(bguards)
+		Sleep( 300 )
+		out("deleting waypoint")
+		DeleteWaypoint( "playerHero" )
+		Sleep( 100 )
+		--Sleep(5)
+		out("guardFollow")
+	end
+end
+
+function planRevenge()
+	return true
+end
+
+function makeEnemy()
+	if((not caratelMode) and USNeutral) then
+		USNeutral=false
+		SetLootMode(true)
+		GVPiterDeal=PQ_ENEMY
+		GVPiterTrade=0
+		SetDiplomacy(0,1,DS_ENEMY)
+		SetDiplomacy(1,0,DS_ENEMY)
+		--if( unitIsOurs(larry)) then
+		--	WaitForUIEx(DialogPlay("larryEnemy"))
+		--	removeFromParty(larry,1)
+		--	GroupAddUnit(bandits,larry)
+		--	UnitSetNormalLogic(larry)
+		--	UnitSetCanTalk(larry,false)
+		--end
+		UnitSetCanTalk(sent,false)
+		--zigmundNeutral=true
+		talked[unit]=true
+		--if(GVLarryQuest==LQ_TAKED) then
+		--	GVLarryQuest=LQ_NONE
+		--end
+		if(toKillHero) then
+			SetLeaveZoneMode( true )
+		end
+		
+		if(unitIsActive(piter)) then
+			CreateAndActivateItem(piter,343)
+		end
+		return(true)
+	end
+	return(false)
+end
+
+function doPiterTrade()
+	out("============  PITER STORE STARTED  ===============")
+	SetMiscConst(GC_SHOPSELLING,sellConst)
+--	WaitForUIEx(FadeOut())
+--	Sleep(20)
+	SetShopMode(true,SH_PITER,SF_WEAPON+SF_GRENADE+SF_MELEE+SF_ARMOUR+SF_MINE)
+	uiShowShop()
+--	WaitForUIEx(FadeIn())
+end
+
+function OnGrenadeThrow(unit, grID, x, y, z)
+	if( (not assasinPlaced) and
+		GroupCanSeeUnit(PlayerGetUnits(1),unit)) then
+		makeEnemy()
+	end	
+end
+
+function OnUnitKillUnit(killer,unit)
+	OnUnitDamageUnit(killer,unit)
+end
+
+function OnMineTriggered( unit )
+	if(IsValid(unit) and 
+		(not caratelMode) and
+		GroupIsContainUnit(bandits,unit)) then
+		makeEnemy()
+	end
+end
+
+function OnUnitDamageUnit(killer,victim)
+	if((not caratelMode) and
+		GroupIsContainUnit(bandits,victim) and
+		GroupIsContainUnit(GetParty(), killer )) then
+		makeEnemy()
+	end
+end
+
+function OnEnterZone()
+	OnEnterZonePrim( "ZEVip",ZT_FOREST,AT_DUST )
+	buzz=GetUnit("buzz")
+	larry=GetUnit("larry")
+	if(zoneEntered==2) then
+		UnitSetCanTalk(sent,true)
+	end
+	if(zoneEntered>1) then
+		if(caratelMode) then
+			caratelTricks()
+		else
+			local zg=false
+			if((GVPiterTrade==1) or (not USNeutral)) then
+				SetLootMode(true)
+				if(GroupCanFight(PlayerGetUnits(1))) then
+					zg=zigfridTalk()
+				else
+					zg=zigfridRun(2,"zigfrid")
+				end
+			else
+				SetLootMode(false)
+				zg=zigfridRun(2,"zigfrid")
+			end
+			if(not zg) then
+				assasinPlaced=placeAssasin(assasinProbability)
+			else
+				assasinPlaced=false
+			end
+			if((not assasinPlaced) and
+				(not zg)) then
+				backgroundDialogs()
+			end
+		end
+	end
+    correctAllPlayersHide()
+--    if((not caratelMode) and unitIsOurs(larry)) then
+--	local banditsKilled=(not IsValid(bandits)) or (not GroupCanFight(bandits))
+--	if(not USNeutral) then
+--		if(banditsKilled) then
+--			if(GVLarryKnowAboutZigmundDeath==0) then
+--				GVLarryKnowAboutZigmundDeath=1
+--				dialogBlockStart(true)
+--				WaitForUIEx(DialogPlay("larryKnowAboutZigmundDeath"))
+--				dialogBlockEnd()
+--			end
+--		else
+--			removeFromParty(larry,1)
+--		end
+--	end
+--    end
+end
+
+function OnTalk(unit,dest)
+	local needDice = false
+	if(talkEnabled) then 
+		dialogBlockStart(true)
+		talkEnabled = false
+		local name = UnitGetName(dest)
+		if(name=="BANDIT1") then        ------------Not yet done
+			out("where BANDIT1 CAME FROM?")
+			--	DialogPlayAsAcks("bandit1"..random(1,5))
+			--elseif(name=="BANDIT2") then
+			--	DialogPlayAsAcks("bandit2"..random(1,5))
+		elseif((name=="STOREMAN") and (GVPiterTrade > 0)) then
+			if(GVPiterTrade > 0) then
+				out("Gonna show the store")
+				doPiterTrade()
+			end
+			--elseif((name=="STOREMAN") and (piterdShowStore or (GVPiterTrade > 0))) then	
+			--uiShowStore()
+			--elseif((name=="PITER") and piterNeutral) then	
+			--	UnitLookAtUnit(dest,unit)
+			--	DialogPlayAsAcks("zigmund"..random(1,5))
+		else		
+			BeginSequenceEx()
+			talked[dest] = true
+			UnitPlayAnimation( dest, -1, true, true )
+			UnitStop(dest)
+			WaitForUnit(dest)
+			UnitCancelAction(dest)
+			UnitLookAtUnit(unit,dest)
+			UnitLookAtUnit(dest,unit)
+			WaitForUnit(unit)
+			WaitForUnit(dest)
+			if(name=="PITER") then
+			    out("==========PIETR IS TALKING============")
+				if((piterFirstTalk) or (attemptPiterNoMoney > 0)) then
+				
+					if(attemptPiterNoMoney == 0) then
+						WaitForUIEx(DialogPlay("ZEVipPiterStart"))
+					end
+					
+					if((GVPiterDeal==PQ_ENEMY) or (GVPiterDeal==PQ_DELAIEDENEMY)) then
+					
+						if(attemptPiterNoMoney == 0) then
+							WaitForUIEx(DialogPlay("ZEVipPiterPayOff"))
+						end	
+						
+						WaitForUIEx( YesNoDialog(1170091, GVPiterMoney) )
+						
+						if(GetLastDialogResult()==1) then
+							local ourMoney = PlayerGetMoney(0)
+							if(GVPiterMoney > ourMoney) then
+								MessageBox( 30499 )
+								attemptPiterNoMoney = attemptPiterNoMoney + 1			
+								if(GVConvoyQuest~=CQ_WITHCAR) then
+									if(attemptPiterNoMoney == 1) then
+										WaitForUIEx(DialogPlay("ZEVipPiterYouStillOwe"))
+									elseif(attemptPiterNoMoney > 6) then
+										UnitSetCanTalk(dest,false)
+										SetLeaveZoneMode(false,1001383)
+										toKillHero = 1
+										StartThread(callGuards)
+										StartThread(callEnforce)
+										Sleep (20 )
+										StartThread(guardFollow)
+									end
+									if(piterFirstTalk) then
+											putTimeMarker( "piterDailyPay", 12 )
+									else
+										if(isTimeExpired("piterDailyPay",true)) then
+											GVPiterMoney = GVPiterMoney + 500
+											putTimeMarker( "piterDailyPay", 12 )
+										end
+									end
+								end
+							else
+								unitGiveItem( GetHero(), dest, 535 )
+								lostMoney(GVPiterMoney)
+								GVPiterDeal = PQ_OK
+								toJournal(1000023)
+								GVPiterDeal=PQ_OK
+							end
+						else
+							StartThread(callGuards)
+							WaitForUIEx(DialogPlay("ZEVipPiterFOff"))
+							SetLeaveZoneMode(false,1001383)														
+							StartThread(callEnforce)
+							Sleep (20 )
+							StartThread(guardFollow)
+							--planRevenge()
+							toKillHero = 1
+							UnitSetCanTalk(dest,false)
+						end
+						
+						if((attemptPiterNoMoney > 0) and (GVConvoyQuest==CQ_WITHCAR) and (noSaleCar==0)) then
+							WaitForUIEx(DialogPlay("ZEVipPiterBuysChest"))
+							WaitForUIEx( YesNoDialog(1500142) )
+							if(GetLastDialogResult()==1) then
+								unitGiveItem(  dest, GetHero(), 535 )
+								WaitForUIEx(DialogPlay("ZEVipPiterBuysChestDebt"))
+								GVPiterDeal=PQ_OK
+								attemptPiterNoMoney = 0
+								GVConvoyQuest = CQ_DONE
+								giveMoney(1500)
+							else
+								WaitForUIEx(DialogPlay("ZEVipPiterYouStillOwe"))
+								GVPiterMoney = GVPiterMoney + 500
+								noSaleCar = 1
+							end
+						end
+					end
+					
+					if(GVPiterDeal==PQ_OK) then
+						WaitForUIEx(DialogPlay("ZEVipPiterWantsMore"))
+						--EndSequencePart()
+						WaitForUIEx(DialogModeBegin())
+						WaitForUIEx( DialogModeSet( 0, 2, 0, 1500143,1500144 ) )
+						local ret = GetLastDialogResult()
+						if(ret~=0) then
+							WaitForUIEx(DialogModeEnd())
+						end
+						if(ret==2) then	
+							WaitForUIEx(DialogPlay("ZEVipPitersOffer"))
+							GVPiterBaseQuest = PBQ_TAKEN
+							GVPiterTrade = 1
+							WaitForUIEx(DialogPlay("ZEVipPiterOfferDetails"))
+							UnitSetCanTalk(mike,true,true)
+							UnitSetCanTalk(storeman,true,true)
+						else
+							out("result is "..ret)
+							StartThread(callGuards)
+							WaitForUIEx(DialogPlay("ZEVipPiterFOff"))
+							SetLeaveZoneMode(false,1001383)														
+							StartThread(callEnforce)
+							Sleep (20 )
+							StartThread(guardFollow)
+							--planRevenge()
+							toKillHero = 1
+							UnitSetCanTalk(dest,false)
+						end
+					end
+					--WaitForUIEx( YesNoDialog(1166061) )
+					--if(GetLastDialogResult()==1) then
+					--	WaitForUIEx(DialogPlay("zigmundYes"))
+					--	UnitSetCanTalk(mike,true)	
+						--UnitCreateItem( GetHero(), MAP_ITEM )
+						--UnitRemoveItem(zigmund,GetItem("map"))
+						--GVSellerQuestState = SQ_ZIGMUNDLIVE
+						--toJournal(1000015)
+						--giveStuff()
+					--else
+					--	WaitForUIEx(DialogPlay("zigmundNo"))
+					--	makeEnemy()
+					--	needDice = true
+					--end
+					piterFirstTalk = false
+					piterNeutral = true
+				elseif((GVConvoyQuest==CQ_WITHCAR) and (noSaleCar==0)) then
+					WaitForUIEx(DialogPlay("ZEVipPiterBuysChest"))
+					WaitForUIEx( YesNoDialog(1500142) )
+					if(GetLastDialogResult()==1) then
+						unitGiveItem(  dest, GetHero(), 535 )
+						--WaitForUIEx(DialogPlay("ZEVipPiterBuysChestDebt"))
+						GVPiterDeal=PQ_OK
+						attemptPiterNoMoney = 0
+						GVConvoyQuest = CQ_DONE
+						giveMoney(3500)
+						GVSellerQuestState = SQ_TOPITER
+						noSaleCar = 1
+					else
+						noSaleCar = 1
+					end
+				--elseif(GVConvoyQuest==CQ_FAILED) then
+				--		WaitForUIEx(DialogPlay("zconvoyFail"))
+				--		GVConvoyQuest = CQ_BADFIN
+				--		UnitSetCanTalk(zigmund,false)
+				end	
+			elseif(name=="MIKE") then
+				if((GroupIsContainUnit( bandits, mike)) and (GVPiterBaseQuest==PBQ_TAKEN)) then
+					WaitForUIEx(DialogPlay("mikeIntro"))
+					WaitForUIEx( YesNoDialog(1500160),1000 )
+					local ourMoney = PlayerGetMoney(0)		
+					if(GetLastDialogResult()==1) then
+						if(ourMoney < 1000) then
+							MessageBox( 30499 )
+						else
+							addToParty(mike)
+							putTimeMarker("mikeHire",24)
+							GroupDeleteUnit(bandits,mike)
+							UnitSetCanTalk(mike,false)
+							toJournal(1000016) -- Needs to create NEW ONE
+							lostMoney(1000)
+						end
+					end
+				end	
+			elseif(name=="GATEGUARD1") then
+				out("===SENT TALK===")
+				if(sentFirstTalk) then
+					WaitForUIEx(DialogPlay("GateGuard1_1"))
+					sentFirstTalk = false
+				else		
+					WaitForUIEx(DialogPlay("sent1"))
+				end	
+				talkWithSent = 1
+				UnitSetCanTalk(sent,false)		
+			end
+			talked[dest] = false
+			EndSequenceEx()
+		end	
+		talkEnabled = true
+		if(needDice) then
+			diceForTurn()
+		end
+		dialogBlockEnd()
+	end	
+end
+
+DelayGameStart()
+
+DividedDeploy("_1")
+
+startStandardZone( "ZEVip", ZT_FOREST, AT_DUST )
+
+UnitSetXPLevel(mike,getPlayerLevel(0)+1)
+UnitSetSkill(mike,ST_BURST,100)
+
+makeAgoodSniper(sniper)
+makeAgoodSniper(sniper2)
+
+UnitSetSkillMaxValue(mob1,ST_SPOT,200)
+UnitSetSkill(mob1,ST_SPOT,200)
+
+SetDiplomacy(1,0,DS_NEUTRAL)
+SetDiplomacy(0,1,DS_NEUTRAL)
+WaitForGroupRoute(GetParty())
+GroupSetDirection(GetParty(),DIR_UP)
+WaitForGroup(GetParty())
+UnitSetCanTalk(sent,true,true)
+UnitSetCanTalk(piter,true,true)
+
+Trigger(isIntruded,makeEnemy)
+
+-- If we do have the convoy car
+startConvoyTricks(1153010)
+
+--placeBritForces()
+StartGame()	
+--startBritAssault()
+UnitPutWeaponToBackpack(piter)
+UnitPutWeaponToBackpack(storeman)
+UnitSetRoute(mob1,CreateRoute("w1","w2","w3","w4"),1)
+UnitRoaming(GetUnit("out1"),"o1",20)
+UnitRoaming(GetUnit("out2"),"o2",20)
+generateShop( SH_PITER, piterStuff )
+SetLootMode(false)
+focusCamera(GetHero())
+--StartThread(callGuards)
+--StartThread(callEnforce)
+--Sleep(100)
+--StartThread(guardFollow)							
+							
+--AutoSave()
