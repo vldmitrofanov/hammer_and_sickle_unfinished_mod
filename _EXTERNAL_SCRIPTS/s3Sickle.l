@@ -1187,8 +1187,8 @@ end
 --VPP	       8	         7	   6       6     4        6	       13           -               -
 --RoadBridge   11            10    9       9     7        9        11           -               -           7
 --Logovo       22            21    21      19    19	      16	   15           -               -           20
---ZEVip         2            1     4       2      5        3        20          4                4           12           0       3
---BritBase      6            5     8      7      7         6        24          6                7           7           3       0
+--ZEVip        2             1     4       2     5        3        20           4               4           12          0       3
+--BritBase     6             5     8       7     7        6        24           6               7           7           3       0
 
 function skipTravelTime(zoneName,bNoApplyTime,bNoSkipTime)
 	local prevZone = GVLastZone
@@ -1278,6 +1278,44 @@ function skipTravelTime(zoneName,bNoApplyTime,bNoSkipTime)
 				hoursToSkip = 9
 			elseif(((prevZone=="VPP") or (zoneName=="VPP"))) then
 				hoursToSkip = 7
+			elseif( (prevZone=="RoadBridge") or (zoneName=="RoadBridge") or (prevZone=="BaseSEUpper") or (zoneName=="BaseSEUpper") ) then
+				hoursToSkip = 10
+			elseif(((prevZone=="LogovoUpper") or (zoneName=="LogovoUpper"))) then
+				hoursToSkip = 21
+			elseif(((prevZone=="FinCamp") or (zoneName=="FinCamp"))) then
+				hoursToSkip = 8
+			elseif(((prevZone=="Swamp") or (zoneName=="Swamp"))) then
+				hoursToSkip = 10
+			end
+	    elseif( ((prevZone=="ZEVip") or (zoneName=="ZEVip")) ) then
+			if(((prevZone=="Convoy") or (zoneName=="Convoy"))) then
+				hoursToSkip = 4
+			elseif(((prevZone=="Lesnik") or (zoneName=="Lesnik"))) then
+				hoursToSkip = 1
+			elseif(((prevZone=="BritBase") or (zoneName=="BritBase"))) then
+				hoursToSkip = 3
+			elseif(((prevZone=="NotRadioCamp") or (zoneName=="NotRadioCamp"))) then
+				hoursToSkip = 1
+			elseif(((prevZone=="Village") or (zoneName=="Village"))) then
+				hoursToSkip = 2
+			elseif(((prevZone=="City") or (zoneName=="City") or (prevZone=="Railroad") or (zoneName=="Railroad") or (prevZone=="Sewerage") or (zoneName=="Sewerage"))) then
+				hoursToSkip = 5
+			elseif(((prevZone=="Prison") or (zoneName=="Prison"))) then
+				hoursToSkip = 3
+			elseif(((prevZone=="WStation") or (zoneName=="WStation") or (prevZone=="WPump") or (zoneName=="WPump") or (prevZone=="WSewerage") or (zoneName=="WSewerage"))) then
+				hoursToSkip = 20
+			elseif(((prevZone=="Bridge") or (zoneName=="Bridge"))) then
+				hoursToSkip = 17
+			elseif(((prevZone=="RoadPost") or (zoneName=="RoadPost"))) then
+				hoursToSkip = 4
+			elseif(((prevZone=="LoseCar") or (zoneName=="LoseCar"))) then
+				hoursToSkip = 4
+			elseif(((prevZone=="Adit") or (zoneName=="Adit"))) then
+				hoursToSkip = 19
+			elseif(((prevZone=="BaseMT") or (zoneName=="BaseMT"))) then
+				hoursToSkip = 9
+			elseif(((prevZone=="VPP") or (zoneName=="VPP"))) then
+				hoursToSkip = 12
 			elseif( (prevZone=="RoadBridge") or (zoneName=="RoadBridge") or (prevZone=="BaseSEUpper") or (zoneName=="BaseSEUpper") ) then
 				hoursToSkip = 10
 			elseif(((prevZone=="LogovoUpper") or (zoneName=="LogovoUpper"))) then
@@ -1419,13 +1457,43 @@ function skipTravelTime(zoneName,bNoApplyTime,bNoSkipTime)
 			elseif(((prevZone=="Swamp") or (zoneName=="Swamp"))) then
 				hoursToSkip = 9
 			end
+	    elseif( ((prevZone=="BritBase") or (zoneName=="BritBase")) ) then
+			if(((prevZone=="WStation") or (zoneName=="WStation") or (prevZone=="WPump") or (zoneName=="WPump") or (prevZone=="WSewerage") or (zoneName=="WSewerage"))) then
+				hoursToSkip = 18
+			elseif(((prevZone=="ZEVip") or (zoneName=="ZEVip"))) then
+				hoursToSkip = 3
+			elseif(((prevZone=="Prison") or (zoneName=="Prison"))) then
+				hoursToSkip = 6
+			elseif(((prevZone=="Bridge") or (zoneName=="Bridge"))) then
+				hoursToSkip = 15
+			elseif(((prevZone=="NotRadioCamp") or (zoneName=="NotRadioCamp"))) then
+				hoursToSkip = 2
+			elseif(((prevZone=="RoadPost") or (zoneName=="RoadPost"))) then
+				hoursToSkip = 6
+			elseif(((prevZone=="LoseCar") or (zoneName=="LoseCar"))) then
+				hoursToSkip = 7
+			elseif(((prevZone=="Adit") or (zoneName=="Adit"))) then
+				hoursToSkip = 17
+			elseif(((prevZone=="BaseMT") or (zoneName=="BaseMT"))) then
+				hoursToSkip = 4
+			elseif(((prevZone=="VPP") or (zoneName=="VPP"))) then
+				hoursToSkip = 6
+			elseif( (prevZone=="RoadBridge") or (zoneName=="RoadBridge") or (prevZone=="BaseSEUpper") or (zoneName=="BaseSEUpper") ) then
+				hoursToSkip = 9
+			elseif(((prevZone=="LogovoUpper") or (zoneName=="LogovoUpper"))) then
+				hoursToSkip = 16
+			elseif(((prevZone=="FinCamp") or (zoneName=="FinCamp"))) then
+				hoursToSkip = 7
+			elseif(((prevZone=="Swamp") or (zoneName=="Swamp"))) then
+				hoursToSkip = 9
+			end
 		elseif( ((prevZone=="WStation") or (zoneName=="WStation") or (prevZone=="WPump") or (zoneName=="WPump") or (prevZone=="WSewerage") or (zoneName=="WSewerage")) ) then
 			if(((prevZone=="RoadPost") or (zoneName=="RoadPost"))) then
 				hoursToSkip = 18
 			elseif(((prevZone=="ZEVip") or (zoneName=="ZEVip"))) then
 				hoursToSkip = 20
 			elseif(((prevZone=="BritBase") or (zoneName=="BritBase"))) then
-				hoursToSkip = 24
+				hoursToSkip = 18
 			elseif(((prevZone=="NotRadioCamp") or (zoneName=="NotRadioCamp"))) then
 				hoursToSkip = 15
 			elseif(((prevZone=="Bridge") or (zoneName=="Bridge"))) then
@@ -2853,7 +2921,7 @@ function OnEnterZonePrim( zoneName, zoneType, zoneAmbient )
 	else
 		currentZoneAmbient = zoneAmbient
 	end
-	zoneEnteredTest()
+	--zoneEnteredTest()
 	zoneEntered = zoneEntered+1
 	if(zoneEntered>1) then
 		GroupClearSounds(GetParty())
@@ -2885,6 +2953,7 @@ function OnEnterZonePrim( zoneName, zoneType, zoneAmbient )
 		threadsEnabled=true
 	end
 	correctAllPlayersHide()
+	OutLog(GetString(1500456)..unfVer,0)
 end
 
 threadsEnabled=true
@@ -5201,5 +5270,6 @@ function showCriticalInfo()
 	end
 end
 
+unfVer = "UnfinishedMod:1.02b" --mod version
 -------------------------------------------------------------------------
 out( 'Sickle scripts were loaded' )

@@ -1,0 +1,18 @@
+--	      ForestBand  Lesnik Convoy	 Village City	Prison	Waterpump	RoadPost     loseCar       VPP      ZEVip  BritBase
+--ForestBand   0             1	   2       3     5        6	   20           2    	    	4
+--Lesnik       1	     0     2       2     4        5        19           2               3
+--Convoy       2             2     0       3     3        5        18           1               2
+--Village      3             2     3       0     3        3        17           3               2
+--City	       5             4     3       3     0        2        15           3               1
+--Prison       7             6     5       4     4        0        17           4               1
+--Adit         20            19    18      17    15       17       0  	        18              14
+--Waterpump    20            19    18      17    15       17       0  	        18              14
+--RoadPost     2             2     1       3     3        5        18           0               2
+--Checkpoint   -             -     -       5     -        -        -            -               -
+--LoseCar      4             3     2       2     1        1        14           2               -
+--BaseMT       10            9     9       7     7        4        18           -               -      
+--VPP	       8	     7	   6       6     4        6	   13           -               -
+--RoadBridge   11            10    9       9     7        9        11           -               -           7
+--Logovo       22            21    21      19    19	  16	   15           -               -           20
+--ZEVip        2             1     4       2     5        3        20           4               4           12          0       3
+--BritBase     6             5     8       7     7        6        18           6               7           7           3       0

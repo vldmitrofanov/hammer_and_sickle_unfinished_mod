@@ -237,7 +237,7 @@ ET_WSTATIONARMYSINGLE	=	1400507
 ET_WSTATIONCIVIL	=	1400508
 ET_WSTATIONCIVILSINGLE	=	1400509
 
--- difficulty
+-- difficulty -- Edited for unfinished mod --
 
 DF_EASY			=	1.39
 DF_NORMAL		=	2.68
@@ -271,7 +271,7 @@ C_DEAF			=	13
 C_BLEEDING		=	14
 
 -- unfinished mod --
-
+-- Piter's docoments quest
 -- GVPiterBaseQuest
 PBQ_NONE = 0
 PBQ_TAKEN = 1
@@ -284,5 +284,9 @@ PBQ_FAILED = 9
 
 -- Seller quest
 SQ_TOPITER		=	7
+
+-- The secret documents
+PK_DOCS = 537
+
 -------------------------------------------------------------------------
 out( 'SConst scripts were loaded' )
